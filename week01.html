@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Generic - Phantom by HTML5 UP</title>
+		<title>Orbezua Luis - Week01</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -22,7 +22,7 @@
 
 							<!-- Logo -->
 								<a href="index.html" class="logo">
-									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Phantom</span>
+									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Orbezua Luis</span>
 								</a>
 
 							<!-- Nav -->
@@ -50,55 +50,191 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>Generic Page</h1>
-							<span class="image main"><img src="images/pic13.jpg" alt="" /></span>
-							<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique.</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel venenatis mauris vehicula hendrerit.</p>
-							<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
+							<h1>The example for fluency in Loops, Conditional Statements, Functions, Variables, Parameters, Arrays, Associative Arrays.</h1>
+							<h2 style="color:blue">Loops</h2>
+							<div style="font-weight: bold">
+								function myLoops()<br>
+								{<br>
+								var numbers = "";<br>
+								for(var i = 1; i <= 100; i++)<br>
+								{<br>
+								numbers = numbers +","+ i;<br>
+								}<br>
+								document.getElementById("resultLoop").innerHTML = "The numbers are: "+ numbers;<br>
+								}<br>
+								<br>
+							</div>
+							<div id="resultLoop" style="overflow: auto"></div><br><br>
+							<button onclick="myLoops()">Go Loop</button><br><br>
+							<hr>
+							<h2 style="color:blue">Conditionals</h2>
+							<div style="font-weight: bold">
+								<table>
+									<tr>
+										<td>
+											function myConditionalIf()<br>
+											{<br>
+											var odd = "";<br>
+											var even = "";<br>
+											for(var i = 1; i <= 100; i++)<br>
+											{<br>
+											if(i%2==0)<br>
+											{<br>
+											even = even +","+ i;<br>
+											}<br>
+											else<br>
+											{<br>
+											odd = odd +","+ i;<br>
+											}<br>
+											}<br>
+											document.getElementById("resultconditional").innerHTML = "The even numbers are with the 'if': "+ even +
+											" <br>The odd numbers are with the 'if': " + odd;
+											}<br>
+										</td>
+										<td>
+											function myConditionalCase()<br>
+											{<br>
+											var odd = "";<br>
+											var even = "";<br>
+											for(var i = 1; i <= 100; i++)<br>
+											{<br>
+											switch (i%2) {<br>
+											case 0:<br>
+											even = even +","+ i;<br>
+											break;<br>
+											default:<br>
+											odd = odd +","+ i;<br>
+											}<br>
+											}<br>
+											document.getElementById("resultconditional").innerHTML = "The even numbers are with the 'case': "+ even +
+											"<br> The odd numbers are with the 'case': " + odd;
+											}<br>
+										</td>
+									</tr>
+								</table>
+
+							</div>
+							<div id="resultconditional" style="overflow: auto"></div><br><br>
+							<button onclick="myConditionalIf()">Go ConditionalIf</button><br><br>
+							<button onclick="myConditionalCase()">Go ConditionalCase</button><br><br>
+							<hr>
+							<h2 style="color:blue">Functions and Parameters</h2>
+							<div style="font-weight: bold">
+								<table>
+									<tr>
+										<td>
+											function myFunctionParameters()<br>
+											{<br>
+											var number = prompt("Enter a number: ");<br>
+											var resultPrime=test_prime(number);<br>
+											var result = "";<br>
+											if(resultPrime == true)<br>
+											{<br>
+											result = "The number " + number + " is Prime"<br>
+											}<br>
+											else<br>
+											{<br>
+											result = "The number " + number + " is not Prime"<br>
+											}<br>
+											document.getElementById("resultFunctionAndParameters").innerHTML = result;<br>
+											}<br>
+										</td>
+										<td>
+											function test_prime(n)<br>
+											{<br>
+											if (n===1)<br>
+											{<br>
+											return false;<br>
+											}<br>
+											else if(n === 2)<br>
+											{<br>
+											return true;<br>
+											}else<br>
+											{<br>
+											for(var x = 2; x < n; x++)<br>
+											{<br>
+											if(n % x === 0)<br>
+											{<br>
+											return false;<br>
+											}<br>
+											}<br>
+											return true;<br>
+											}<br>
+											}<br>
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div id="resultFunctionAndParameters" style="overflow: auto"></div><br><br>
+							<button onclick="myFunctionParameters()">Go Function</button><br><br>
+
+							<hr>
+							<h2 style="color:blue">Arrays, Associative Arrays</h2>
+							<div style="font-weight: bold">
+								<table>
+									<tr>
+										<td>
+											function myArrays()<br>
+											{<br>
+											var array1=[1,2,5,3,10,11];<br>
+											var array2=[9,5,2,4,7];<br>
+											// calling function sumIndex<br>
+											var arraySum3=sumIndex(array1, array2);<br>
+											document.getElementById("resultArray").innerHTML = arraySum3;<br>
+											}<br>
+
+										</td>
+										<td>
+											function sumIndex(array1,array2)<br>
+											{<br>
+											var theSum = [];<br>
+											for ( var i = 0; i < array1.length; i++)<br>
+											{<br>
+											if(array1[i]=="" || array1[i]== null)<br>
+											{<br>
+											array1[i]= 0;<br>
+											}<br>
+											if(array2[i]=="" || array2[i]== null)<br>
+											{<br>
+											array2[i]= 0;<br>
+											}<br>
+											theSum[i] = array1[i] + array2[i];<br>
+											}<br>
+											return theSum;<br>
+											}<br>
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div id="resultArray" style="overflow: auto"></div><br><br>
+							<button onclick="myArrays()">Go my Arrays</button><br><br>
+							<hr>
+							<h2 style="color:blue">Associative Array</h2>
+							<div style="font-weight: bold">
+								function yourInfo()<br>
+								{<br>
+								var personalInfo = new Object();<br>
+								var firstName = prompt("Enter your first name")<br>;
+								var lastName = prompt("Enter your last name");<br>
+								var phoneNumber = prompt("Enter your telephone number");<br>
+								personalInfo["firstName"]= firstName;<br>
+								personalInfo["lastName"]= lastName;<br>
+								personalInfo["phoneNumber"]= phoneNumber;<br>
+								var compleateInfo = "";<br>
+								for(var i in personalInfo)<br>
+								{<br>
+								compleateInfo += i + "=" + personalInfo[i];<br>
+								}<br>
+								document.getElementById("resultAsociative").innerHTML = compleateInfo;<br>
+								}<br>
+								<br>
+							</div>
+							<div id="resultAsociative" style="overflow: auto"></div><br><br>
+							<button onclick="yourInfo()">Go Associative</button><br><br>
+
+
 						</div>
 					</div>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<section>
-								<h2>Get in touch</h2>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<input type="text" name="name" id="name" placeholder="Name" />
-										</div>
-										<div class="field half">
-											<input type="email" name="email" id="email" placeholder="Email" />
-										</div>
-										<div class="field">
-											<textarea name="message" id="message" placeholder="Message"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send" class="primary" /></li>
-									</ul>
-								</form>
-							</section>
-							<section>
-								<h2>Follow</h2>
-								<ul class="icons">
-									<li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
-									<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
-									<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
-								</ul>
-							</section>
-							<ul class="copyright">
-								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</footer>
-
 			</div>
 
 		<!-- Scripts -->
@@ -107,6 +243,8 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+		<!-- CDN for week01 Loop -->
+		    <script src="js/week01a.js"></script>
 
 	</body>
 </html>
