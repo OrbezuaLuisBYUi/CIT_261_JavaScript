@@ -1,0 +1,127 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Orbezua Luis - Week02</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Orbezua Luis</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="week01.html">Week 01</a></li>
+							<li><a href="week02.html">Week 02</a></li>
+							<li><a href="week03.html">Week 03</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Object Creation Functions, Inheritance, Properties, Methods, Instantiation.</h1>
+
+							<h2 style="color:blue">Class and inheritances</h2>
+							<div style="font-weight: bold">
+								class Car{<br>
+								constructor(brand) {<br>
+								this.carname = brand;<br>
+								}<br>
+								present() {<br>
+								return 'I have a ' + this.carname;<br>
+								}<br>
+								}<br>
+
+								class Model extends Car {<br>
+								constructor(brand, mod, year, miles) {<br>
+								super(brand);<br>
+								this.model = mod;<br>
+								this.year = year;<br>
+								this.miles = miles;<br>
+								}<br>
+								show() {<br>
+								return this.present() + ', your vehicle model is: ' + this.model + ', and the year is: '+ this.year + ' And your car has ' + this.miles + ' miles ';
+								}<br>
+								sellCar(){<br>
+								var date = new Date();<br>
+								var currentYear = date.getFullYear();<br>
+								var sellData = {brand:this.present(), model:this.model, year:this.year, miles: this.miles};<br>
+								var txt = "";<br>
+								var x;<br>
+								for (x in sellData) {<br>
+
+								txt += sellData[x];<br>
+								}<br>
+								return txt + " The last price will be: "
+								+parseFloat(((this.miles - this.year) - (currentYear - this.year)) / (currentYear - this.year)).toFixed(2);<br>
+								}<br>
+								}<br>
+								function informationCars(){<br>
+								var brand = prompt("Enter brand of car");<br>
+								var model = prompt("Enter model for your car");<br>
+								var year = prompt( "Enter year for the car");<br>
+								var miles = prompt( "Enter the miles from your car");<br><br>
+
+								mycar = new Model(brand, model, year,miles);<br>
+								document.getElementById("resultCars").innerHTML = mycar.show();<br>
+								//var sell = prompt("Would you like to sell your vehicle?")<br>
+								if (confirm('Would you like to sell your vehicle?')) {<br>
+
+								alert("Your car is available to sell for the amount of: " + mycar.sellCar());<br>
+								}<br>
+								else<br>
+								{<br>
+								alert( "Please if you change your mind, we will be here to sell your car, Thank you!")<br>
+								}<br>
+								}<br>
+
+							</div>
+							<div id="resultCars" style="overflow: auto"></div><br><br>
+							<button onclick="informationCars()">Go Inheritance</button><br><br>
+
+
+						</div>
+					</div>
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+		<!-- CDN for week01 Loop -->
+		    <script src="js/week02a.js"></script>
+
+	</body>
+</html>

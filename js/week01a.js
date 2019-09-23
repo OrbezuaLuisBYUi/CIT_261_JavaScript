@@ -93,7 +93,7 @@ var array1=[1,2,5,3,10,11];
 var array2=[9,5,2,4,7];
     // calling function sumIndex
 var arraySum3=sumIndex(array1, array2);
-document.getElementById("resultArray").innerHTML = arraySum3;
+document.getElementById("resultArray").innerHTML = "The index sum betwen array1 and array2 is:" + "" + arraySum3;
 }
 
 function sumIndex(array1,array2)
