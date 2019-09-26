@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Orbezua Luis - Week03</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Orbezua Luis</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="week01.html">Week 01</a></li>
+							<li><a href="week02.html">Week 02</a></li>
+							<li><a href="week03.html">Week 03</a></li>
+							<li><a href="week04.html">Week 04</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>JSON Parse and Stringify.</h1>
+
+							<h2 style="color:blue">JSON Parse </h2>
+							<div style="font-weight: bold">
+								function informationPerson(){<br>
+								var name = prompt("Enter your name");<br>
+								var lastName = prompt("Enter your last name");<br>
+								var country = prompt( "Enter your country");<br>
+								var age = prompt( "Enter age");<br><br>
+
+								var myInfo = '{"name":"'+name+'", "lastName":"'+lastName+'","country":"'+country+'", "age":"'+age+'"}';<br>
+								var obj = JSON.parse(myInfo) ;<br>
+								document.getElementById("resultJson").innerHTML = " My name is: " + obj.name + " " + obj.lastName + " My country " +
+								"is: " + obj.country + " I am " + obj.age + " yeas old ";<br><br>
+
+
+								var json = {<br>
+								"0": {<br>
+								"name": name,<br>
+								"lastName": lastName,<br>
+								"country": country,<br>
+								"age":age<br>
+								},<br><br>
+								"1":{<br>
+								"name": "Luis",<br>
+								"lastName": "Peterland",<br>
+								"country": "USA",<br>
+								"age":1000<br>
+								}<br>
+								};<br>
+								var persons = "";<br>
+								for (var i in json) { // i is the index for the Json<br>
+								for (var j in json[i]) // j is the values , columns<br>
+								{<br>
+								persons += " Position: " +i+ " KEY: "+j+" VALUE: "+json[i][j];<br>
+								}<br>
+								}<br>
+								document.getElementById("resultJson2").innerHTML = persons;<br>
+
+							</div>
+							<div id="resultJson" style="overflow: auto"></div><br>
+							<div id="resultJson2" style="overflow: auto"></div><br>
+							<button onclick="informationPerson()">Go Json Parse</button><br><br>
+							<hr>
+							<h2 style="color:blue">JSON Stringify() </h2>
+							<div style="font-weight: bold">
+								function informationStringify(){<br>
+								var obj = { name: "Luis", age: 3000, city: "Heaven", job: "atHome" };<br>
+								var myJSON = JSON.stringify(obj);<br>
+								document.getElementById("resultStringify").innerHTML = myJSON;<br>
+								}<br>
+
+							</div>
+							<div id="resultStringify" style="overflow: auto"></div><br>
+
+							<button onclick="informationStringify()">Go Json Parse</button><br><br>
+
+						</div>
+					</div>
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+		<!-- CDN for week01 Loop -->
+		    <script src="js/week03b.js"></script>
+
+	</body>
+</html>
