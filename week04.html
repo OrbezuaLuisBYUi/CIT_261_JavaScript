@@ -1,0 +1,158 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Orbezua Luis - Week03</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Orbezua Luis</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="week01.html">Week 01</a></li>
+							<li><a href="week02.html">Week 02</a></li>
+							<li><a href="week03.html">Week 03</a></li>
+							<li><a href="week04.html">Week 04</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Using XMLHTTPRequest to Consume a JSON Web Service.</h1>
+
+							<h2 style="color:blue">XMLHTTPRequest </h2>
+							<div style="font-weight: bold">
+								function informationCarSales(){<br>
+								//*****creates an XMLHttpRequest object:<br>
+								var xhttp = new XMLHttpRequest();<br>
+								//onreadystatechange property specifies a function to be executed every time the status of the XMLHttpRequest object changes<br>
+								xhttp.onreadystatechange = function() {<br>
+								//readyState property is 4 and the status property is 200, the response is ready<br>
+								if (this.readyState == 4 && this.status == 200) {<br>
+								//responseText property returns the server response as a text string.<br>
+								//The text string can be used to update a web page<br>
+								document.getElementById("resultXMLHTTPrequest").innerHTML = this.responseText;<br>
+								}<br>
+								};<br>
+								xhttp.open("GET", "text/infoCars.txt", true);<br>
+								xhttp.send();<br>
+								}<br><br>
+
+								function addCarsList(){<br>
+								//to obtain the value from user, document is from is call the function<br>
+								var brand=document.getElementById("brand").value;<br>
+								var model=document.getElementById("model").value;<br>
+								var miles=document.getElementById("miles").value;<br>
+								var year=document.getElementById("year").value;<br>
+								var price=document.getElementById("price").value;<br>
+
+								var myInfo = '{"brand":"'+brand+'", "model":"'+model+'","miles":"'+miles+'", "year":"'+year+'", "price":"'+price+'"}';<br>
+								var obj = JSON.parse(myInfo) ;<br>
+								//document.getElementById("resultJson").innerHTML = " My car is a: " + obj.brand + " " + obj.model + " Miles " +<br>
+								// + obj.model + " I am selling this car for  " + obj.price + " dollars "<br>
+
+								var list = document.getElementById("addCar");<br>
+								var newNode = document.createElement('div');<br>
+								newNode.innerHTML = " My car is a: " + obj.brand + " " + obj.model + " Miles " +<br>
+								+ obj.miles + " I am selling this car for  " + obj.price + " dollars ";<br>
+								list.appendChild( newNode )<br>
+								}<br>
+
+							</div>
+							<label>Add car to sell by Owner</label>
+							<table>
+								<tr>
+									<td style="width: 15px">
+										<strong>Brand</strong>
+									</td>
+									<td>
+										<input type="text" ID="brand">
+									</td>
+								</tr>
+								<tr>
+									<td style="width: 15px">
+										<strong>Model</strong>
+									</td>
+									<td>
+										<input type="text" ID="model">
+									</td>
+								</tr>
+								<tr>
+									<td style="width: 15px">
+										<strong>Miles</strong>
+									</td>
+									<td>
+										<input type="text" ID="miles">
+									</td>
+								</tr>
+								<tr>
+									<td style="width: 15px">
+										<strong>Year</strong>
+									</td>
+									<td>
+										<input type="text" ID="year">
+									</td>
+								</tr>
+								<tr>
+									<td style="width: 15px">
+										<strong>Price</strong>
+									</td>
+									<td>
+										<input type="text" ID="price">
+									</td>
+								</tr>
+							</table><br>
+
+							<div id="resultXMLHTTPrequest" style="overflow: auto"></div><br>
+							<div id="addCar"></div><br>
+							<button onclick="informationCarSales()">Go XMLHTTPRequest</button><br><br>
+							<button onclick="addCarsList()">Add Cars to sell</button><br><br>
+
+
+						</div>
+					</div>
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+		<!-- CDN for week01 Loop -->
+		    <script src="js/week04.js"></script>
+
+	</body>
+</html>
