@@ -40,10 +40,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="week04.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="week04.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/week04.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.8689759" vertical-offset="2107" max-vertical-offset="2771">
+            <state vertical-scroll-proportion="22.192308" vertical-offset="2107" max-vertical-offset="2771">
               <caret line="90" column="37" selection-start-line="90" selection-start-column="37" selection-end-line="90" selection-end-column="37" />
               <folding>
                 <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -56,11 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="week04.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="week04.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/week04.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="731">
-              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="38" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.33854908" vertical-offset="0" max-vertical-offset="731">
+              <caret line="16" column="76" selection-start-line="16" selection-start-column="76" selection-end-line="16" selection-end-column="76" />
               <folding>
                 <element signature="n#!!doc;n#informationCarSales#0" expanded="false" />
               </folding>
@@ -97,8 +97,8 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/text1.js" />
         <option value="$PROJECT_DIR$/text2.txt.ts" />
-        <option value="$PROJECT_DIR$/js/week04.js" />
         <option value="$PROJECT_DIR$/week04.html" />
+        <option value="$PROJECT_DIR$/js/week04.js" />
       </list>
     </option>
   </component>
@@ -261,7 +261,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-21" y="43" width="1552" height="840" extended-state="1" />
+    <frame x="-21" y="43" width="1552" height="840" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -621,19 +621,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/week04.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="731">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="38" selection-end-column="1" />
-          <folding>
-            <element signature="n#!!doc;n#informationCarSales#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/week04.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.8689759" vertical-offset="2107" max-vertical-offset="2771">
+        <state vertical-scroll-proportion="22.192308" vertical-offset="2107" max-vertical-offset="2771">
           <caret line="90" column="37" selection-start-line="90" selection-start-column="37" selection-end-line="90" selection-end-column="37" />
           <folding>
             <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -641,6 +631,16 @@
             <element signature="n#style#0;n#td#0;n#tr#2;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#td#0;n#tr#3;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#td#0;n#tr#4;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/week04.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33854908" vertical-offset="0" max-vertical-offset="731">
+          <caret line="16" column="76" selection-start-line="16" selection-start-column="76" selection-end-line="16" selection-end-column="76" />
+          <folding>
+            <element signature="n#!!doc;n#informationCarSales#0" expanded="false" />
           </folding>
         </state>
       </provider>

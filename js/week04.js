@@ -14,7 +14,7 @@ function informationCarSales(){
             document.getElementById("resultXMLHTTPrequest").innerHTML = this.responseText;
         }
     };
-    xhttp.open("GET", "text/infoCars.txt", true);
+    xhttp.open("GET", "https://orbezualuisbyui.github.io/CIT_261_JavaScript/text/infoCars.txt", true);
     xhttp.send();
 }
 
