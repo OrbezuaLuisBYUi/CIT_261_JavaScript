@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Orbezua Luis - Week03</title>
+		<title>Orbezua Luis - Week05</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -60,62 +60,54 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>JSON Parse and Stringify.</h1>
+							<h1>Local Storage API, Storing and Retrieving Simple Data, Arrays, Associative Arrays, and Objects</h1>
 
-							<h2 style="color:blue">JSON Parse </h2>
+							<h2 style="color:blue">Local Storage </h2>
 							<div style="font-weight: bold">
-								function informationPerson(){<br>
-								var name = prompt("Enter your name");<br>
-								var lastName = prompt("Enter your last name");<br>
-								var country = prompt( "Enter your country");<br>
-								var age = prompt( "Enter age");<br><br>
+							function createStorageForList(){<br>
+							var name = prompt("Enter your name");<br>
+							var lastName = prompt("Enter your last name");<br>
+							var country = prompt( "Enter your country");<br>
+							var age = prompt( "Enter age");<br>
+							var job = prompt( "Enter your job");<br>
 
-								var myInfo = '{"name":"'+name+'", "lastName":"'+lastName+'","country":"'+country+'", "age":"'+age+'"}';<br>
-								var obj = JSON.parse(myInfo) ;<br>
-								document.getElementById("resultJson").innerHTML = " My name is: " + obj.name + " " + obj.lastName + " My country " +
-								"is: " + obj.country + " I am " + obj.age + " yeas old ";<br><br>
+							localStorage.setItem("name", name);<br>
+							localStorage.setItem("lastName", lastName);<br>
+							localStorage.setItem("country", country);<br>
+							localStorage.setItem("age", age);<br>
+							localStorage.setItem("job", job);<br>
 
+							}
+							//function to show the list <br>
+							function showItemsList(){<br>
+							var  i;<br>
+							document.getElementById("addItems").innerHTML = "";<br>
+							for (i = 0; i < localStorage.length; i++) {<br>
+							var k = localStorage.key(i);<br>
+							x=localStorage.getItem(k);<br>
+							document.getElementById("addItems").innerHTML += "Key: " +k+ " Value: "+x + "<br>";<br>
+							}<br>
+							}<br>
+							//funtion to delete items from list.<br>
+							function resetList() {<br>
+							localStorage.clear();<br>
+							document.getElementById("deleteListNow").innerHTML = "You just deleted all the items from your List" + "<br>";<br>
 
-								var json = {<br>
-								"0": {<br>
-								"name": name,<br>
-								"lastName": lastName,<br>
-								"country": country,<br>
-								"age":age<br>
-								},<br><br>
-								"1":{<br>
-								"name": "Luis",<br>
-								"lastName": "Peterland",<br>
-								"country": "USA",<br>
-								"age":1000<br>
-								}<br>
-								};<br>
-								var persons = "";<br>
-								for (var i in json) { // i is the index for the Json<br>
-								for (var j in json[i]) // j is the values , columns<br>
-								{<br>
-								persons += " Position: " +i+ " KEY: "+j+" VALUE: "+json[i][j];<br>
-								}<br>
-								}<br>
-								document.getElementById("resultJson2").innerHTML = persons;<br>
-
-							</div>
-							<div id="resultJson" style="overflow: auto"></div><br>
-							<div id="resultJson2" style="overflow: auto"></div><br>
-							<button onclick="informationPerson()">Go Json Parse</button><br><br>
+							}<br>
 							<hr>
-							<h2 style="color:blue">JSON Stringify() </h2>
-							<div style="font-weight: bold">
-								function informationStringify(){<br>
-								var obj = { name: "Luis", age: 3000, city: "Heaven", job: "atHome" };<br>
-								var myJSON = JSON.stringify(obj);<br>
-								document.getElementById("resultStringify").innerHTML = myJSON;<br>
-								}<br>
+							<div id="resultLocalStorage" style="overflow: auto"></div><br>
 
-							</div>
-							<div id="resultStringify" style="overflow: auto"></div><br>
-
-							<button onclick="informationStringify()">Go Stringify</button><br><br>
+							<h3>Create a local Storage for your item list.</h3>
+							<p>First click on the button</p>
+							<button onclick="createStorageForList()">Go StorageList</button><br><br>
+							<h3>Display the List with the Items</h3>
+							<p>Click the on the second button to display all items:</p>
+							<button onclick="showItemsList()">To show the Items</button><br><br>
+							<div id="addItems"></div><br>
+							<h3>To reset the list</h3>
+							<p>Click the button to delete the List:</p>
+							<button onclick="resetList();showItemsList()">Delete items</button>
+							<div id="deleteListNow"></div>
 
 						</div>
 					</div>
@@ -128,7 +120,7 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 		<!-- CDN for week01 Loop -->
-		    <script src="js/week03b.js"></script>
+		    <script src="js/week05a.js"></script>
 
 	</body>
 </html>
