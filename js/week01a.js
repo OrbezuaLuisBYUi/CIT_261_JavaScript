@@ -113,7 +113,7 @@ function sumIndex(array1,array2)
     }
     return theSum;
 }
-
+//associative array
 function yourInfo()
 {
     var personalInfo = new Object();

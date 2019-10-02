@@ -4,7 +4,7 @@
 
 
 
-
+//this class "Car" is the father class
 class Car{
     constructor(brand) {
         this.carname = brand;
@@ -13,10 +13,10 @@ class Car{
         return 'I have a ' + this.carname;
     }
 }
-
+//this class Model is the daughter of class Car, we know because the keyword "extends"
 class Model extends Car {
     constructor(brand, mod, year, miles) {
-        super(brand);
+        super(brand); // super is calling father class constructor.
         this.model = mod;
         this.year = year;
         this.miles = miles;
