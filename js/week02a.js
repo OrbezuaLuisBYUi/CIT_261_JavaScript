@@ -8,11 +8,13 @@
 class Car{
     constructor(brand) {
         this.carname = brand;
+
     }
     present() {
         return 'I have a ' + this.carname;
     }
 }
+
 //this class Model is the daughter of class Car, we know because the keyword "extends"
 class Model extends Car {
     constructor(brand, mod, year, miles) {
@@ -20,6 +22,7 @@ class Model extends Car {
         this.model = mod;
         this.year = year;
         this.miles = miles;
+
     }
     show() {
         return this.present() + ', your vehicle model is: ' + this.model + ', and the year is: '+ this.year + ' And your car has ' + this.miles + ' miles ';
@@ -36,7 +39,9 @@ class Model extends Car {
         }
         return txt + " The last price will be: " +parseFloat(((this.miles - this.year) - (currentYear - this.year)) / (currentYear - this.year)).toFixed(2);
     }
+
 }
+
 function informationCars(){
     var brand = prompt("Enter brand of car");
     var model = prompt("Enter model for your car");
@@ -54,5 +59,23 @@ function informationCars(){
     {
         alert( "Please if you change your mind, we will be here to sell your car, Thank you!")
     }
+
+}
+
+class Country{
+    constructor(country) {
+        this.carCountry = country;
+    }
+    static showCountry(c) {
+        return "Using Static...The country for your car is:  " + c.carCountry;
+    }
+
+}
+function addInfoCar(){
+
+    var country = prompt("Enter car's country");
+    mycar = new Country(country);
+    document.getElementById("addCountry").innerHTML=Country.showCountry(mycar);
+
 }
 
