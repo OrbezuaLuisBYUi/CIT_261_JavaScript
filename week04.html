@@ -65,7 +65,7 @@
 							<h2 style="color:blue">XMLHTTPRequest </h2>
 							<div style="font-weight: bold">
 								function informationCarSales(){<br>
-								//*****creates an XMLHttpRequest object:<br>
+								//*****creates an XMLHttpRequest object and call internal file.text:<br>
 								var xhttp = new XMLHttpRequest();<br>
 								//onreadystatechange property specifies a function to be executed every time the status of the XMLHttpRequest object changes<br>
 								xhttp.onreadystatechange = function() {<br>
@@ -79,7 +79,7 @@
 								xhttp.open("GET", "text/infoCars.txt", true);<br>
 								xhttp.send();<br>
 								}<br><br>
-
+                                 // function to enter the imputs from user<br>
 								function addCarsList(){<br>
 								//to obtain the value from user, document is from is call the function<br>
 								var brand=document.getElementById("brand").value;<br>
@@ -153,12 +153,10 @@
 							<button onclick="informationCarSales()">Go XMLHTTPRequest</button><br><br>
 							<h3>Add a car information</h3>
 							<button onclick="addCarsList()">Add Cars to sell</button><br><br>
-							<h3>Bring info from API with XMLHTTPRequest</h3>
+							<h3>Bring info from API with "XMLHTTPRequest", look above all the buttons the result</h3>
 							<button onclick="informationAPI()">Go XMLHTTPRequest_JSON</button><br><br>
-							<h3>Bring info from API with Fetch</h3>
+							<h3>Bring info from API with "Fetch", look above all the buttons the result</h3>
 							<button onclick="showingPokemon()">Go Json_Api_POKEMON_with_Fetch</button><br><br>
-
-
 
 						</div>
 					</div>
