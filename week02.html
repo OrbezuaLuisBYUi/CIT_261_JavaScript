@@ -72,7 +72,7 @@
 								return 'I have a ' + this.carname;<br>
 								}<br>
 								}<br>
-
+                                // "extends" to show this class is inheritance from class Car <br>
 								class Model extends Car {<br>
 								constructor(brand, mod, year, miles) {<br>
 								super(brand);<br>
@@ -80,9 +80,11 @@
 								this.year = year;<br>
 								this.miles = miles;<br>
 								}<br>
+								// function to show imputs from user<br>
 								show() {<br>
 								return this.present() + ', your vehicle model is: ' + this.model + ', and the year is: '+ this.year + ' And your car has ' + this.miles + ' miles ';
 								}<br>
+								//function to sell the car<br>
 								sellCar(){<br>
 								var date = new Date();<br>
 								var currentYear = date.getFullYear();<br>
@@ -93,6 +95,7 @@
 
 								txt += sellData[x];<br>
 								}<br>
+								//this return will show the result from this formula and we parseFloat with two decimals.toFixed(2)<br>
 								return txt + " The last price will be: "
 								+parseFloat(((this.miles - this.year) - (currentYear - this.year)) / (currentYear - this.year)).toFixed(2);<br>
 								}<br>
@@ -115,11 +118,30 @@
 								alert( "Please if you change your mind, we will be here to sell your car, Thank you!")<br>
 								}<br>
 								}<br>
+								<hr>
+								class Country{<br>
+								constructor(country) {<br>
+								this.carCountry = country;<br>
+								}<br>
+								static showCountry(c) {<br>
+								return "Using Static...The country for your car is:  " + c.carCountry;<br>
+								}<br>
+
+								}<br>
+								function addInfoCar(){<br>
+
+								var country = prompt("Enter car's country");<br>
+								mycar = new Country(country);<br>
+								document.getElementById("addCountry").innerHTML=Country.showCountry(mycar);<br>
+
+								}
 
 							</div>
 							<div id="resultCars" style="overflow: auto"></div><br><br>
 							<div id="addCountry" style="overflow: auto"></div><br><br>
+							<h3>This button "Go Inheritance" is using inheritance between classes.</h3>
 							<button onclick="informationCars()">Go Inheritance</button><br><br>
+							<h3>This button "addInfoCars" is using a static function. </h3>
 							<button onclick="addInfoCar()">Go addInfoCars</button><br><br>
 
 
