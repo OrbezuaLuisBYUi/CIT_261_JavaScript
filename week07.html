@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+    <title>Orbezua Luis - Week05</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+    <link id="style" rel="stylesheet" href="week07background.css">
+    <style>
+        .hand{
+            width: 100px;
+            height: 100px;
+            cursor: pointer
+        }
+        .week07initial{
+            font-weight: bold;
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            font-size: large;
+        }
+        .week07modify{
+            font-weight: normal;
+            font-family: "Cabin Sketch", cursive;
+            font-size: medium;
+        }
+    </style>
+</head>
+<body class="is-preload">
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Header -->
+    <header id="header">
+        <div class="inner">
+
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Orbezua Luis</span>
+            </a>
+
+            <!-- Nav -->
+            <nav>
+                <ul>
+                    <li><a href="#menu">Menu</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- Menu -->
+    <nav id="menu">
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="week01.html">Week 01</a></li>
+            <li><a href="week02.html">Week 02</a></li>
+            <li><a href="week03.html">Week 03</a></li>
+            <li><a href="week04.html">Week 04</a></li>
+            <li><a href="week05.html">Week 05</a></li>
+            <li><a href="week06.html">Week 06</a></li>
+            <li><a href="week07.html">Week 07</a></li>
+            <li><a href="week08.html">Week 08</a></li>
+            <li><a href="week09.html">Week 09</a></li>
+            <li><a href="week10.html">Week 10</a></li>
+            <li><a href="week11.html">Week 12</a></li>
+            <li><a href="week12.html">Week 13</a></li>
+            <li><a href="week13.html">Week 13</a></li>
+            <li><a href="week14.html">Week 14</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+            <h1>DOM Manipulation Using createElement, appendChild, insertBefore, removeChild</h1>
+            <h2 style="color:blue">DOM </h2>
+            <div style="font-weight: bold">
+                //****Part of the Code;
+                //create elements<br>
+                function week06() {<br>
+                //Por medio de createElement podemos crear una etiqueta HTML<br>
+                //identify the place to add the new node, id: week06<br>
+                var list = document.getElementById("week06");<br>
+                //to create a new element in this case p is for a paragraph or sentence<br>
+                var parrafo1 = document.createElement('p');<br>
+                var parrafo2 = document.createElement('p');<br>
+                //what I will put in this case Paragraph-1 to test week 06<br>
+                parrafo1.innerHTML = "Paragraph-1 to test week 06";//Contenido<br>
+                parrafo2.innerHTML = "Paragraph-2 to test again the week 06";<br>
+                list.appendChild(parrafo1);<br>
+                list.appendChild(parrafo2);<br>
+                }<br><br>
+                //function to insert new node before the old one<br>
+                function week06a(){<br>
+                if(confirm("Do you want to see in action insertBefore?"))<br>
+                {<br>
+                //insertBefore***************<br>
+                //This allow us to select a node and insert a new node before the selected.<br>
+                // Create new paragraph with the   p<br>
+                var newParagraph = document.createElement('p');<br>
+                newParagraph.innerHTML = "Nuevo different paragraph before the old one.";<br>
+                // Because  with the function week06 I created 2 paragraph, like an array I selected index 1 (second paragraph) and before will be the new one.<br>
+                var secondParagraph = document.getElementById('week06').getElementsByTagName('p')[1];<br>
+                // now it is the moment to insert before<br>
+                document.getElementById('week06').insertBefore(newParagraph,secondParagraph);<br>
+                }<br>
+                }<br>
+
+                <img src="images/hand.png" class="hand" onmouseover="this.src = 'images/blackhand.png'" onmouseout="this.src = 'images/hand.png'" />
+                <div id="week07" class="week07initial">
+                    Week 07: Manipulating CSS Class Properties Using JavaScript.
+                </div>
+                <p>First click on the button to create an Element</p>
+                <button onclick="week07()">Manipulating CSS</button><br><br>
+                <p> Next button will allow us to insert a new Node before paragraph 2</p>
+                <button onclick="week07original()">Go backk to original color</button><br><br>
+                <p> Next button will allow us to insert a new Node before paragraph 2</p>
+                <button onclick="week07modify()">Modify style</button><br><br>
+                <p> Next button will allow us to insert a new Node before paragraph 2</p>
+                <button onclick="week07sheet()">Modify style sheet</button><br><br>
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <!-- CDN for week01 Loop -->
+    <script src="js/week07.js"></script>
+</div>
+</body>
+</html>
