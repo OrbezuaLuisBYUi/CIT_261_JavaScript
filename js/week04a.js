@@ -26,7 +26,7 @@ function addCarsList(){
     var year=document.getElementById("year").value;
     var price=document.getElementById("price").value;
     if(brand==""|| model==""|| miles==""|| year==""||price=="") {
-        alert("Please enter the info about your car, above")
+        alert("Please enter the info about your car, above, after finishing, click on the button again.")
 
     }
     else

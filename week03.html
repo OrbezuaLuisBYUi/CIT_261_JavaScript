@@ -69,7 +69,7 @@
 								var lastName = prompt("Enter your last name");<br>
 								var country = prompt( "Enter your country");<br>
 								var age = prompt( "Enter age");<br><br>
-
+                                //Json format
 								var myInfo = '{"name":"'+name+'", "lastName":"'+lastName+'","country":"'+country+'", "age":"'+age+'"}';<br>
 								var obj = JSON.parse(myInfo) ;<br>
 								document.getElementById("resultJson").innerHTML = " My name is: " + obj.name + " " + obj.lastName + " My country " +
@@ -100,6 +100,7 @@
 								document.getElementById("resultJson2").innerHTML = persons;<br>
 
 							</div>
+							<h2 style="color:blue">Here below, you will see  convert a string written in JSON format, into a JavaScript object </h2>
 							<div id="resultJson" style="overflow: auto"></div><br>
 							<div id="resultJson2" style="overflow: auto"></div><br>
 							<button onclick="informationPerson()">Go Json Parse</button><br><br>

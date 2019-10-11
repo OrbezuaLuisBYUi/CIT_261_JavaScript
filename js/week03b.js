@@ -1,10 +1,6 @@
 /**
- * Created by jloin on 9/23/2019.
- */
-
-
-
-
+ * Created by jloin on 9/23/2019. */
+//asking user for inputs
 function informationPerson(){
     var name = prompt("Enter your name");
     var lastName = prompt("Enter your last name");
@@ -47,6 +43,6 @@ function informationPerson(){
 function informationStringify(){
     var obj = { name: "Luis", age: 3000, city: "Heaven", job: "atHome" };
     var myJSON = JSON.stringify(obj);
-    document.getElementById("resultStringify").innerHTML = "<strong>to transform in string: </strong>" + myJSON;
+    document.getElementById("resultStringify").innerHTML = "<strong style='color:blue'>to transform in string: </strong>" + myJSON;
 }
 
