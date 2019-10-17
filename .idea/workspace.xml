@@ -40,15 +40,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="week08.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="week08.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/week08.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.41203704" vertical-offset="821" max-vertical-offset="1887">
+            <state vertical-scroll-proportion="-4.8545456" vertical-offset="821" max-vertical-offset="1887">
               <caret line="64" column="19" selection-start-line="64" selection-start-column="19" selection-end-line="64" selection-end-column="19" />
               <folding>
                 <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="week05.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/week05.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.4307229" vertical-offset="1584" max-vertical-offset="2278">
+              <caret line="110" column="32" selection-start-line="110" selection-start-column="32" selection-end-line="110" selection-end-column="32" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -101,7 +111,6 @@
         <option value="$PROJECT_DIR$/js/week03b.js" />
         <option value="$PROJECT_DIR$/week04.html" />
         <option value="$PROJECT_DIR$/js/week04a.js" />
-        <option value="$PROJECT_DIR$/week05.html" />
         <option value="$PROJECT_DIR$/week06.html" />
         <option value="$PROJECT_DIR$/week03.html" />
         <option value="$PROJECT_DIR$/dropdown.css" />
@@ -110,6 +119,7 @@
         <option value="$PROJECT_DIR$/transitionAnimation.css" />
         <option value="$PROJECT_DIR$/js/week08.js" />
         <option value="$PROJECT_DIR$/week08.html" />
+        <option value="$PROJECT_DIR$/week05.html" />
       </list>
     </option>
   </component>
@@ -291,7 +301,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="43" width="1552" height="840" extended-state="1" />
+    <frame x="-6" y="43" width="1552" height="840" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -612,13 +622,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/week05.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334" vertical-offset="1569" max-vertical-offset="2261">
-          <caret line="105" column="54" selection-start-line="105" selection-start-column="48" selection-end-line="105" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/week06.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="793" max-vertical-offset="1496">
@@ -711,12 +714,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/week08.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41203704" vertical-offset="821" max-vertical-offset="1887">
+        <state vertical-scroll-proportion="-4.8545456" vertical-offset="821" max-vertical-offset="1887">
           <caret line="64" column="19" selection-start-line="64" selection-start-column="19" selection-end-line="64" selection-end-column="19" />
           <folding>
             <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week05.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4307229" vertical-offset="1584" max-vertical-offset="2278">
+          <caret line="110" column="32" selection-start-line="110" selection-start-column="32" selection-end-line="110" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
