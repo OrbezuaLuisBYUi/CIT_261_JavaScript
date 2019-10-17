@@ -1,0 +1,102 @@
+.flag1 {
+    border-radius: 6px;
+    transition-property: background, border-radius;
+    transition-duration: .2s, 1s;
+    transition-timing-function: linear;
+    width: 20%;
+    height: 20%;
+}
+.flag1:hover {
+    border-radius: 50%;
+}
+.flag2 {
+    width: 20%;
+    height: 20%;
+    -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
+    transition: width 2s;
+}
+.flag2:hover {
+    width: 30%;
+}
+.flag3 {
+    width: 20%;
+    height: 20%;
+    -webkit-transition: translate 20s;
+    transition: translate 20s;
+}
+.flag3:hover {
+    -moz-transform: translate(150px, 0px);
+    -webkit-transform: translate(150px, 0px);
+    -o-transform: translate(150px, 0px);
+    -ms-transform: translate(150px, 0px);
+    transform: translate(150px, 0px);
+}
+.flag4 {
+    border-radius: 6px;
+    transition-property: background, border-radius;
+    transition-duration: .2s, 1s;
+    transition-timing-function: linear;
+    width: 20%;
+    height: 20%;
+}
+.flag4:hover {
+    border-radius: 50%;
+    -moz-transform: skew(-14deg, 0deg);
+    -webkit-transform: skew(-14deg, 0deg);
+    -o-transform: skew(-14deg, 0deg);
+    -ms-transform: skew(-14deg, 0deg);
+    transform: skew(-14deg, 0deg);
+}
+.base {
+    width: 200px;
+    height: 200px;
+    position: relative;
+
+}
+.animation {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+
+}
+
+.flag5 {
+    width: 100px;
+    height: 100px;
+    -webkit-transition: width 2s;
+    transition: width 3s;
+}
+
+.flag5:hover {
+    width: 400px;
+}
+
+#color {
+    transition-property: background-color;
+    transition-duration: 3s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

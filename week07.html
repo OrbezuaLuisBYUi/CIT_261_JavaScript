@@ -114,18 +114,32 @@
                 }<br>
                 }<br>
 
-                <img src="images/hand.png" class="hand" onmouseover="this.src = 'images/blackhand.png'" onmouseout="this.src = 'images/hand.png'" />
-                <div id="week07" class="week07initial">
+                <img src="images/hand.png" id="rotate1" class="hand" onmouseover="this.src = 'images/blackhand.png'" onmouseout="this.src = 'images/hand.png'" />
+                <div id="week07" class="week07initial"id="week07red" style="color: blue">
                     Week 07: Manipulating CSS Class Properties Using JavaScript.
                 </div>
-                <p>First click on the button to create an Element</p>
+
+                <p>First click on the button to create new style, background and colort</p>
                 <button onclick="week07()">Manipulating CSS</button><br><br>
-                <p> Next button will allow us to insert a new Node before paragraph 2</p>
+                <p> Next button will allow us to back to the origical form the div</p>
                 <button onclick="week07original()">Go backk to original color</button><br><br>
-                <p> Next button will allow us to insert a new Node before paragraph 2</p>
+                <p> Next button will allow us to change the style and to a red color</p>
                 <button onclick="week07modify()">Modify style</button><br><br>
-                <p> Next button will allow us to insert a new Node before paragraph 2</p>
+                <p> Next button will allow us to change the background of this sheet (white)</p>
                 <button onclick="week07sheet()">Modify style sheet</button><br><br>
+                <p> To rotate the hand above 50 deg to the left</p>
+                <button onclick="rotateFunction()">click to rotate the hand</button><br><br>
+
+                <p>Put your mouse over this button to open the drop box</p>
+                <button onclick="dropdownBlock()" class="dropbtn">Dropdown this button</button>
+                <div style="display: none" id="dropdown1" class="dropdown">
+
+                    <ul class="dropdown-content">
+                        <li href="#">Home</li>
+                        <li href="#">Job</li>
+                        <li href="#">Church</li>
+                    </ul>
+                </div>
 
 
 
@@ -144,3 +158,5 @@
 </div>
 </body>
 </html>
+
+//https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_onmouseover_html

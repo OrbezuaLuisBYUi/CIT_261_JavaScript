@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+    <title>Orbezua Luis - Week05</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+    <link id="style" rel="stylesheet" href="transitionAnimation.css">
+
+</head>
+<body class="is-preload">
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Header -->
+    <header id="header">
+        <div class="inner">
+
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Orbezua Luis</span>
+            </a>
+
+            <!-- Nav -->
+            <nav>
+                <ul>
+                    <li><a href="#menu">Menu</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- Menu -->
+    <nav id="menu">
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="week01.html">Week 01</a></li>
+            <li><a href="week02.html">Week 02</a></li>
+            <li><a href="week03.html">Week 03</a></li>
+            <li><a href="week04.html">Week 04</a></li>
+            <li><a href="week05.html">Week 05</a></li>
+            <li><a href="week06.html">Week 06</a></li>
+            <li><a href="week07.html">Week 07</a></li>
+            <li><a href="week08.html">Week 08</a></li>
+            <li><a href="week09.html">Week 09</a></li>
+            <li><a href="week10.html">Week 10</a></li>
+            <li><a href="week11.html">Week 12</a></li>
+            <li><a href="week12.html">Week 13</a></li>
+            <li><a href="week13.html">Week 13</a></li>
+            <li><a href="week14.html">Week 14</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+            <h1>Creating CSS3 Transitions and Animations in CSS and triggering them with JavaScript</h1>
+            <h2 style="color:blue">DOM </h2>
+            <div style="font-weight: bold">
+
+                //*******************Part of the Code; <br>
+                function week08() <br>
+                { <br>
+                var elem = document.getElementById("animation"); <br>
+                var pos = 0; <br>
+                var id = setInterval(frame, 10); <br>
+                function frame() { <br>
+                if (pos == 150) { <br>
+                clearInterval(id); <br>
+                } else { <br>
+                pos++; <br>
+                elem.style.top = pos + 'px'; <br>
+                elem.style.left = pos + 'px'; <br>
+                } <br>
+                } <br>
+                } <br>
+
+                <br>
+                <p>Move the mouse over the flag to round the flag</p>
+                <img src="images/1.png" class="flag1"><br>
+                <p>Move the mouse over the flag to enlarge</p>
+                <img src="images/2.png" class="flag2"><br>
+                <p>Move the mouse over the flag to move the flag to the right side</p>
+                <img src="images/3.png" class="flag3"><br>
+                <p>Move the mouse over the flag to change shape to a  parallelogram and rounds edges </p>
+                <img src="images/1.png" class="flag4"><br>
+                <p>Move the mouse over the flag to put longer to the right </p>
+                <img src="images/1.png" class="flag5"><br>
+                <p>First click on the button to move the flag diagonally</p>
+                <button onclick="week08()">Animations with triggering  CSS</button>
+                <div class="base">
+                    <img src="images/2.png" class="animation" id="animation">
+                </div><br><br>
+                <button id="newcolor">Click to change my color</button>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <!-- CDN for week01 Loop -->
+    <script src="js/week08.js"></script>
+</div>
+</body>
+</html>
