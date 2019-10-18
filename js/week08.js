@@ -20,6 +20,8 @@ function week08()
 
 //function to change the color , last button
 newcolor.onclick = function() {
-    this.style.backgroundColor = 'yellow';
+    //this.style.backgroundColor = 'yellow';
+    var newcolor = document.getElementById('newcolor');
+    newcolor.className = 'changeColors';
 
 };
