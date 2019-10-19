@@ -80,39 +80,27 @@
     <!-- Main -->
     <div id="main">
         <div class="inner">
-            <h1>DOM Manipulation Using createElement, appendChild, insertBefore, removeChild</h1>
+            <h1>Manipulating CSS Class Properties Using JavaScript</h1>
             <h2 style="color:blue"> </h2>
             <div style="font-weight: bold">
-                //****Part of the Code;
-                //create elements<br>
-                function week06() {<br>
-                //Por medio de createElement podemos crear una etiqueta HTML<br>
-                //identify the place to add the new node, id: week06<br>
-                var list = document.getElementById("week06");<br>
-                //to create a new element in this case p is for a paragraph or sentence<br>
-                var parrafo1 = document.createElement('p');<br>
-                var parrafo2 = document.createElement('p');<br>
-                //what I will put in this case Paragraph-1 to test week 06<br>
-                parrafo1.innerHTML = "Paragraph-1 to test week 06";//Contenido<br>
-                parrafo2.innerHTML = "Paragraph-2 to test again the week 06";<br>
-                list.appendChild(parrafo1);<br>
-                list.appendChild(parrafo2);<br>
-                }<br><br>
-                //function to insert new node before the old one<br>
-                function week06a(){<br>
-                if(confirm("Do you want to see in action insertBefore?"))<br>
+                //****Part of the Code;<br>
+                function week07(){<br>
+                var div = document.getElementById('week07');<br>
+                div.style.backgroundColor = 'blue';<br>
+                div.style.color = 'white';<br>
+
+
+                }<br>
+                function week07original(){<br>
+                var div = document.getElementById('week07');<br>
+                if(confirm("Do you want to back to original div?"))<br>
                 {<br>
-                //insertBefore***************<br>
-                //This allow us to select a node and insert a new node before the selected.<br>
-                // Create new paragraph with the   p<br>
-                var newParagraph = document.createElement('p');<br>
-                newParagraph.innerHTML = "Nuevo different paragraph before the old one.";<br>
-                // Because  with the function week06 I created 2 paragraph, like an array I selected index 1 (second paragraph) and before will be the new one.<br>
-                var secondParagraph = document.getElementById('week06').getElementsByTagName('p')[1];<br>
-                // now it is the moment to insert before<br>
-                document.getElementById('week06').insertBefore(newParagraph,secondParagraph);<br>
+                div.style.backgroundColor = null;<br>
+                div.style.color = null;<br>
+                div.className = 'week07initial';<br>
                 }<br>
                 }<br>
+
                 <p style="color: blue">Move the mouse over the hand to change image(there are two different pictures) with different color the same hand</p>
                 <img src="images/hand.png" id="rotate1" class="hand" onmouseover="this.src = 'images/blackhand.png'" onmouseout="this.src = 'images/hand.png'" />
                 <div id="week07" class="week07initial"id="week07red" style="color: blue">

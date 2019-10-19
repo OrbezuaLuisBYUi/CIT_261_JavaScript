@@ -6,7 +6,7 @@ function week07(){
     div.style.backgroundColor = 'blue';
     div.style.color = 'white';
 
-//Referencia: https://entrellaves.com/javascript/cambiar-css-con-javascript/
+
 }
 
 function week07original(){
