@@ -1,0 +1,45 @@
+
+/* START ONCHANGE */
+#myDIV {
+    margin: 25px;
+    width: 550px;
+    height: 100px;
+    background: #ff00ff;
+    position: relative;
+    font-size: 20px;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+    from {top: 0px;}
+    to {top: 200px;}
+}
+
+@keyframes mymove {
+    from {top: 0px;}
+    to {top: 200px;}
+}
+
+
+/* START ONCLICK */
+.divonclick {
+    width: 285px;
+    height: 100px;
+    background-color: red;
+    -webkit-animation-name: example; /* Calling example */
+    -webkit-animation-duration: 4s; /* Action for seconds */
+    animation-name: example;/* The standart animation */
+    animation-duration: 4s;
+}
+
+/* for different browsers/
+@-webkit-keyframes example {
+    from {background-color: red;}
+    to {background-color: yellow;}
+}
+
+/* Standard syntax */
+@keyframes example {
+    from {background-color: red;}
+    to {background-color: yellow;}
+}

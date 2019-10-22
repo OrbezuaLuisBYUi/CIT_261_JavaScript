@@ -20,7 +20,7 @@ function informationCarSales(){
 
 function addCarsList(){
     //to obtain the value from user, document is from is call the function
-    var brand=document.getElementById("brand").value;
+    var brand=document.getElementById("brand").value; //obtain the value inside of this input
     var model=document.getElementById("model").value;
     var miles=document.getElementById("miles").value;
     var year=document.getElementById("year").value;
@@ -31,16 +31,16 @@ function addCarsList(){
     }
     else
     {
-
+        // create in a object of data
         var myInfo = '{"brand":"' + brand + '", "model":"' + model + '","miles":"' + miles + '", "year":"' + year + '", "price":"' + price + '"}';
-        var obj = JSON.parse(myInfo);
+        var obj = JSON.parse(myInfo); //to format Json, object of data associative array
         //document.getElementById("resultJson").innerHTML = " My car is a: " + obj.brand + " " + obj.model + " Miles " +
         // + obj.model + " I am selling this car for  " + obj.price + " dollars "
 
         var list = document.getElementById("addCar");
-        var newNode = document.createElement('div');
+        var newNode = document.createElement('div'); // create element the div and it is in the memory
         newNode.innerHTML = " My car is a: " + obj.brand + " " + obj.model + " Miles " + +obj.miles + " I am selling this car for  " + obj.price + " dollars ";
-        list.appendChild(newNode);
+        list.appendChild(newNode); // list is reference to the id addCar
     }
 
 }
@@ -48,8 +48,8 @@ function informationAPI(){
     var xmlhttp = new XMLHttpRequest();
     var url = "https://jsonplaceholder.typicode.com/posts";
     xmlhttp.onreadystatechange=function() {
-        if (this.readyState == 4 && this.status == 200) {
-            myFunction(this.responseText);
+        if (this.readyState == 4 && this.status == 200) {//from line 55
+            myFunction(this.responseText); // this is the answer of the url
         }
     }
     xmlhttp.open("GET", url, true);
@@ -57,11 +57,11 @@ function informationAPI(){
 }
 
 function myFunction(response) {
-    var arr = JSON.parse(response);
-    var i;
-    var out = "<table>";
+    var arr = JSON.parse(response); // from string to Json to be read one by one
+    var i; //for every position
+    var out = "<table>";  // to show the table Html
     for(i = 0; i < 10; i++) {
-        out += "<tr><td>" +
+        out += "<tr><td>" +   // concatenar row (tr) with column (td)
         arr[i].id +
         "</td><td>" +
         arr[i].title +
@@ -75,20 +75,20 @@ function myFunction(response) {
 
 // method to use the fetch to read the API
 function showingPokemon(){
-    var list = document.getElementById("showpokemon");
-    var newNode = document.createElement('div');
+    var list = document.getElementById("showpokemon");  // id to shwo the info
+    var newNode = document.createElement('div'); //create in memory the div
 
     for(var i = 70; i <= 80; i++)
     {
-        const url = 'https://pokeapi.co/api/v2/pokemon/'+i;
+        const url = 'https://pokeapi.co/api/v2/pokemon/'+i;  //i represent from 70 to 80
 
         fetch(url)
-            .then(response => response.json())
-    .then(data => {
+            .then(response => response.json()) // if answer is in format Json
+    .then(data => { //then read, data is the answer from line 86
         newNode.innerHTML += " ID: " + data.id + " NAME POKEMON: " + data.name+"<br>";
 
         var species = data.species;
-        for (x in species) {
+        for (x in species) { // reading the info inside of species
             newNode.innerHTML += x + ": " + species[x]+"<br>";
         }
         var sprites = data.sprites;
@@ -98,6 +98,6 @@ function showingPokemon(){
         newNode.innerHTML += "<br><br>";
     }).catch(err=>console.log(err))
 }
-list.appendChild( newNode );
+list.appendChild( newNode );//this newNode from line 79
 }
 

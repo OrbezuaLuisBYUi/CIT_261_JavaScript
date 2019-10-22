@@ -14,6 +14,7 @@
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
     <link id="style" rel="stylesheet" href="transitionAnimation.css">
+    <link rel="stylesheet" href="week09.css">
 
 </head>
 <body class="is-preload">
@@ -67,25 +68,74 @@
             <h1>Standard JavaScript Events Including those for Mobile Devices ( Ex. onTouchBegin, onLoad, etc.) and Animation and Transition Events</h1>
             <h2 style="color:blue">Mobile Devices </h2>
             <div style="font-weight: bold">
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <script type="text/javascript" src="funciones.js"></script>
+
+                </head>
+                <body onload="ONLOADFUNCTION()">
+                <!--
+                DOCUMENTACIÓN:
+                //https://www.w3schools.com/jsref/event_animationend.asp
+                //https://www.w3schools.com/css/tryit.asp?filename=trycss3_animation1
+                //https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_touchstart
+                -->
+
+                <!-- *************************START ONLOAD*************************** -->
+                START ONLOAD, Just after start this topic, the onload is working upload the picture hand.<br>
+                <div id="divonload"></div>
+                <!-- *************************END ONLOAD*************************** -->
+
+                <!-- *************************START ONCHANGE*************************** -->
+                START ONCHANGE, change the color of this below colors<br>
+                <input type="color" id="color1" value="#ff00ff" onchange="myFunction()">
+                <input type="color" id="color2" value="#00ff00" onchange="myFunction()">
+                <input type="color" id="color3" value="#0000ff" onchange="myFunction()">
 
 
-                <br>
-                <p>Move the mouse over the flag to round the flag</p>
-                <img src="images/1.png" class="flag1"><br>
-                <p>Move the mouse over the flag to enlarge</p>
-                <img src="images/2.png" class="flag2"><br>
-                <p>Move the mouse over the flag to move the flag to the right side</p>
-                <img src="images/3.png" class="flag3"><br>
-                <p>Move the mouse over the flag to change shape to a  parallelogram and rounds edges </p>
-                <img src="images/1.png" class="flag4"><br>
-                <p>Move the mouse over the flag to put longer to the right </p>
-                <img src="images/1.png" class="flag5"><br>
-                <p>First click on the button to move the flag diagonally</p>
-                <button onclick="week08()">Animations with triggering  CSS</button>
-                <div class="base">
-                    <img src="images/2.png" class="animation" id="animation">
-                </div><br><br>
-                <button id="newcolor">Click to change my color</button>
+
+                <div id="myDIV">To to start the Animation  you need to select a color on the input color box above to see how is working the onchange.</div>
+                <!-- *************************END ONCHANGE*************************** -->
+
+                <hr><br>
+
+                <!-- *************************START ONCLICK*************************** -->
+                START ONCLICK<br>
+                <div id="divonclick"></div>
+                <button onclick="ONCLICKFUNCTION()">ONCLICKFUNCTION</button>
+                <!-- *************************END ONCLICK*************************** -->
+
+                <hr><br>
+
+                <!-- *************************START touchstart*************************** -->
+                START TOUCHSTART<br>
+                <p>This is working on touch devices only so you need to use the righ click on the button ontouchstarfunction, then select inspect and after this you will
+                select on the top mode movil, now you can click on the button as a touch device so see the message. </p>
+                <div id="divmessage" style="color: red;">Mensaje:</div>
+                <p><strong>Note:</strong> This example is for touch devices only.</p>
+                <button ontouchstart="touchstart()">ONTOUCHSTARTFUNCTION</button>
+                <!-- *************************END touchstart*************************** -->
+
+                <hr><br>
+
+                <!-- *************************START ONFOCUS*************************** -->
+                START ONFOCUS<br>
+                <p>To see in action onfocus and onkeyup,if you start typing the focus will be active with a blue background if you click outside of the input text it will 
+                be white. To understand the onkeyup you will see how the system will tell you the amount of characters that you are typing.</p>
+                <input type="text" onfocus="MYFOCUS(this)"  onfocusout="myFocusOut(this)" placeholder="Type here" onkeyup="MYONKEYUP(this.value)">
+                <div id="divcaracteres">Amount of characters:</div>
+
+                <hr><br>
+
+                <!-- *************************END touchstart*************************** -->
+
+                </body>
+                </html>
+
+
+
+
 
             </div>
 
