@@ -29,7 +29,7 @@ function informationPerson(){
                 "age":1000
             }
         };
-        var persons = ""; // this will be a contatenador
+        var persons = ""; // this will be a concatenador
         for (var i in json) { // i is the index 0 and 1 so the rows for the Json
             //alert("Posición: "+i);
             for (var j in json[i]) // j is the values , columns
