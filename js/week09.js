@@ -82,3 +82,5 @@ function MYONKEYUP(val)
 {
     document.getElementById('divcaracteres').innerHTML = "The amount of characters is(using OnkeyUp): "+val.length;
 }
+
+

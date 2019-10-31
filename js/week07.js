@@ -55,3 +55,28 @@ function dropdownBlock(){
 
     }
 }
+
+function myFunction() {
+    var x = document.getElementById("my1").className;
+    document.getElementById("demo").innerHTML = x;
+}
+
+function myFunction1() {
+    var x = document.getElementById("my2").className;
+    document.getElementById("demo22").innerHTML = x;
+}
+
+function myFunction2() {
+    document.getElementById("myDIV").classList.add("mystyle111");
+    var x = document.getElementById("myDIV").className;
+    document.getElementById("demo33").innerHTML = x;
+}
+
+function myFunction3() {
+    var x = document.getElementById("myDIV");
+    if (x.className === "mystyle") {
+        x.className = "mystyle2";
+    } else {
+        x.className = "mystyle";
+    }
+}

@@ -30,6 +30,29 @@
             font-family: "Cabin Sketch", cursive;
             font-size: medium;
         }
+
+        .mystyle {
+            width: 370px;
+            height: 40px;
+            background-color: pink;
+            color: white;
+            margin-bottom: 12px;
+        }
+
+        .mystyle22 {
+            width: 370px;
+            height: 40px;
+            background-color: green;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .mystyle111 {
+            width: 370px;
+            height: 40px;
+            background-color: blue;
+            color: white;
+        }
     </style>
 </head>
 <body class="is-preload">
@@ -128,7 +151,34 @@
                         <li href="#">Church</li>
                     </ul>
                 </div>
+                <!-- *************************value of the class attribute*************************** -->
+                <p style="color: blue">Click the button to display the value of the class attribute of the div element below. You can see below three div but two with color and the third is without color but you will be able to add it</p>
 
+                <div id="my1" class="mystyle">
+                    I am a DIV element with class="mystyle"
+                </div>
+                <div id="my2" class="mystyle22">
+                    I am a DIV element with class="mystyle22"
+                </div>
+                <div id="myDIV">
+                    I am a DIV element with class="mystyle111"
+                </div>
+
+
+                <p>Click the button to display the value of the class attribute of the div element below.</p>
+                <button onclick="myFunction()">div 1</button>
+                <p  id="demo">"My div element class name is:"</p>
+                <p>Click the button to display the value of the class attribute of the div element below.</p>
+                <button onclick="myFunction1()">div 2</button>
+                <p id="demo22">"My div element class name is:"</p>
+
+                <p>Click the button to display the value of the class attribute of the div element below.</p>
+                <button onclick="myFunction2()">div 3 No color yet</button>
+                <p id="demo33">"My div element class name is:" and is blue color</p>
+
+                <p>Click the button to change the color div3 for div 1 pink color, using the class.If you want again blue, click on button div 3</p>
+
+                <button onclick="myFunction3()">Change color div 3</button>
 
 
             </div>

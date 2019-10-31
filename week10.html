@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+    <title>Orbezua Luis - Week05</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+    <link rel="stylesheet" href="week10.css" />
+    <script type="text/javascript" src="week10.js"></script>
+
+</head>
+<body class="is-preload">
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Header -->
+    <header id="header">
+        <div class="inner">
+
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Orbezua Luis</span>
+            </a>
+
+            <!-- Nav -->
+            <nav>
+                <ul>
+                    <li><a href="#menu">Menu</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- Menu -->
+    <nav id="menu">
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="week01.html">Week 01</a></li>
+            <li><a href="week02.html">Week 02</a></li>
+            <li><a href="week03.html">Week 03</a></li>
+            <li><a href="week04.html">Week 04</a></li>
+            <li><a href="week05.html">Week 05</a></li>
+            <li><a href="week06.html">Week 06</a></li>
+            <li><a href="week07.html">Week 07</a></li>
+            <li><a href="week08.html">Week 08</a></li>
+            <li><a href="week09.html">Week 09</a></li>
+            <li><a href="week10.html">Week 10</a></li>
+            <li><a href="week11.html">Week 12</a></li>
+            <li><a href="week12.html">Week 13</a></li>
+            <li><a href="week13.html">Week 13</a></li>
+            <li><a href="week14.html">Week 14</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+            <h1>HTML5 Tags - Video, Audio, and Canvas</h1>
+            <h2 style="color:blue">Video and Audio/Canvas </h2>
+            <div style="font-weight: bold">
+
+
+                <!-- VIDEO HTML5 -->
+
+                <!-- controls: to have the control of play and pause inside of the video... -->
+                <div class="left">
+                    <video id="myvideo" width="400" controls="">
+                        <source src="videow10.mp4" type="video/mp4">
+                        Your browser does not support HTML5 video.
+                    </video> <p>Inside of video you have panel control for play and pause</p>
+                    <hr>
+                    <button onclick="funcionesvideo('play')">Play</button>
+                    <button onclick="funcionesvideo('pause')">Pause</button>
+                    <button onclick="funcionesvideo('big')">Take Big</button>
+                    <button onclick="funcionesvideo('small')">Take Small</button>
+                    <button onclick="funcionesvideo('normal')">Take Normal</button>
+                </div>
+                <!-- END VIDEO HTML5 -->
+
+                <hr>
+
+                <!-- AUDIO HTML5 -->
+
+                <div class="left">
+                    <audio id="myaudio" controls>
+                        <source src="audiow10.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <hr>
+                    <button onclick="funcionesaudio('play')">Play</button>
+                    <button onclick="funcionesaudio('pause')">Pause</button>
+                </div>
+                <!-- END AUDIO HTML5 -->
+
+                <hr>
+
+                <!-- CANVAS as a lienzo to paint HTML5 -->
+
+                <div class="left">
+                    <canvas id="mycanvas1" width="200" height="100" style="border:1px solid #000000;"></canvas>
+                    <hr>
+                    <button onclick="funcionescanvas('text')">Text and Color</button>
+                    <br>
+                    <canvas id="mycanvas2" width="200" height="100" style="border:1px solid #000000;"></canvas>
+                    <hr>
+                    <img id="image" src="images/car.jpg" width="50" height="50"><br>
+                    <button onclick="funcionescanvas('img')">Send the image car into Canvas 2</button>
+
+                </div>
+               <!-- END CANVAS HTML5 -->
+
+            </div>
+        </div>
+    </div>
+
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+<!-- CDN for week01 Loop -->
+<script src="js/week10.js"></script>
+</div>
+</body>
+</html>
