@@ -29,6 +29,16 @@ function funcionesvideo(opc) {
     {
         video.width = 400;
     }
+    else
+    if(opc == "getTime")
+    {
+        alert(video.currentTime);
+    }
+    else
+    if(opc == "setTime")
+    {
+        video.currentTime=6;
+    }
 }
 function funcionesaudio(opc)
 {
@@ -66,3 +76,4 @@ function funcionescanvas(opc)
         ctx.drawImage(img,0,0,100,100);
     }
 }
+
