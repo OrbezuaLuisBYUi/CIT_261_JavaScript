@@ -1,0 +1,24 @@
+.container {
+    margin-top: 180px;
+    text-align: center
+}
+
+.square {
+    display: inline-block;
+    background-color: #00A896;
+    border-radius: 5px;
+    height: 100px;
+    width: 100px;
+    margin: 0 40px;
+    transition: transform 1s ease-in-out;
+}
+
+.square1:hover {
+    transform: rotate(90deg);
+}
+.square2:hover {
+    transform: rotate(1000deg);
+}
+.square3:hover {
+    transform: rotate(-100deg);
+}

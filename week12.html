@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
-    <link id="style" rel="stylesheet" href="transitionAnimation.css">
+    <link rel="stylesheet" href="week12.css" />
 
 </head>
 <body class="is-preload">
@@ -64,34 +64,53 @@
     <!-- Main -->
     <div id="main">
         <div class="inner">
-            <h1>Creating CSS3 Transitions and Animations in CSS and triggering them with JavaScript</h1>
-            <h2 style="color:blue">Transition and Animation </h2>
+            <h1>Designing, Defining, and Triggering CSS3 Transitions without Custom Libraries (Thought Library)</h1>
+            <h2 style="color:blue">Without Custom Libraries </h2>
             <div style="font-weight: bold">
 
 
-                <br>
-                <p>Move the mouse over the flag to round the flag</p>
-                <img src="images/1.png" class="flag1"><br>
-                <p>Move the mouse over the flag to enlarge</p>
-                <img src="images/2.png" class="flag2"><br>
-                <p>Move the mouse over the flag to move the flag to the right side</p>
-                <img src="images/3.png" class="flag3"><br>
-                <p>Move the mouse over the flag to change shape to a  parallelogram and rounds edges </p>
-                <img src="images/1.png" class="flag4"><br>
-                <p>Move the mouse over the flag to put longer to the right </p>
-                <img src="images/1.png" class="flag5"><br>
-                <p>First click on the button to move the flag diagonally</p>
-                <button onclick="week08()">Animations with triggering  CSS</button>
-                <div class="base">
-                    <img src="images/2.png" class="animation" id="animation">
-                </div><br><br>
-                <button  id="newcolor">Click to change my color</button>
+                <!-- Transitions-->
+                <hr>
+                <p>
+                    Linear: Using the same speed to move it.<br>
+                    Ease: Starting slow, faster and to finish is slow.<br>
+                    Ease-in: Starting slow and hold the same speed after that.<br>
+                    Ease-out: Same speed but will finish slowly.<br>
+                    Ease-in-out: Starting and finish slow but the start is a little bit faster.
+                </p>
+                <h2 style="color:blue">Hover the mouse over the figures </h2>
+                <hr>
+                <!-- REF: https://medium.com/@kswanie21/css3-animations-with-transitions-transforms-5a9c01e5efb5 -->
+                <!-- https://thoughtbot.com/blog/transitions-and-transforms -->
+                <div class="container">
+                    <div id="square1" class="square square1"></div>
+                    <div id="square2" class="square square2"></div>
+                    <div id="square3" class="square square3"></div>
+                    <br><br>
+                    <hr>
+                    rotate:
+                    <button type="button" onclick="transform1()">Transform 1</button>
+                    <button type="button" onclick="resettransform()">Reset Transform 1</button>
+                    <hr>
+                    skew (X,Y):
+                    <button type="button" onclick="transform2()">Transform 2</button>
+                    <button type="button" onclick="resettransform()">Reset Transform 2</button>
+                    <hr>
+                    scale:
+                    <button type="button" onclick="transform3()">Transform 3</button>
+                    <button type="button" onclick="resettransform()">Reset Transform 3</button>
+                    <hr>
+                    translate (X,Y):
+                    <button type="button" onclick="transform4()">Transform 4</button>
+                    <button type="button" onclick="resettransform()">Reset Transform 4</button>
+                </div>
+
+
 
             </div>
-
         </div>
     </div>
-</div>
+
 
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
@@ -100,7 +119,7 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
     <!-- CDN for week01 Loop -->
-    <script src="js/week08.js"></script>
+    <script src="js/week12.js"></script>
 </div>
 </body>
 </html>

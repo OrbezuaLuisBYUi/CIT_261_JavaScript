@@ -13,7 +13,8 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
-    <link id="style" rel="stylesheet" href="transitionAnimation.css">
+    <link rel="stylesheet" href="week13.css" />
+
 
 </head>
 <body class="is-preload">
@@ -64,34 +65,36 @@
     <!-- Main -->
     <div id="main">
         <div class="inner">
-            <h1>Creating CSS3 Transitions and Animations in CSS and triggering them with JavaScript</h1>
-            <h2 style="color:blue">Transition and Animation </h2>
+            <h1>Designing, Defining, and Triggering CSS3 Animations without Custom Libraries (Thought Library)</h1>
+            <h2 style="color:blue">Without Custom Libraries </h2>
             <div style="font-weight: bold">
 
 
-                <br>
-                <p>Move the mouse over the flag to round the flag</p>
-                <img src="images/1.png" class="flag1"><br>
-                <p>Move the mouse over the flag to enlarge</p>
-                <img src="images/2.png" class="flag2"><br>
-                <p>Move the mouse over the flag to move the flag to the right side</p>
-                <img src="images/3.png" class="flag3"><br>
-                <p>Move the mouse over the flag to change shape to a  parallelogram and rounds edges </p>
-                <img src="images/1.png" class="flag4"><br>
-                <p>Move the mouse over the flag to put longer to the right </p>
-                <img src="images/1.png" class="flag5"><br>
-                <p>First click on the button to move the flag diagonally</p>
-                <button onclick="week08()">Animations with triggering  CSS</button>
-                <div class="base">
-                    <img src="images/2.png" class="animation" id="animation">
-                </div><br><br>
-                <button  id="newcolor">Click to change my color</button>
+                <!-- Transitions-->
+                <hr>
+                <p>
+                    Linear: Using the same speed to move it.<br>
+                    Ease: Starting slow, faster and to finish is slow.<br>
+                    Ease-in: Starting slow and hold the same speed after that.<br>
+                    Ease-out: Same speed but will finish slowly.<br>
+                    Ease-in-out: Starting and finish slow but the start is a little bit faster.
+                </p>
+                <h2 style="color:blue">Hover the mouse over the figures </h2>
+                <hr>
+                <!-- REF: http://www.falconmasters.com/css/guia-animaciones-css3/ -->
+                <div class="infinita div">Infinita</div>
+                <div class="hover div">Hover</div>
+
+                <!-- https://developer.mozilla.org/es/docs/Web/CSS/CSS_Animations/Usando_animaciones_CSS -->
+                <p id="noinfinita">Esta es una animación CSS3 NO INFINITA</p>
+                <p id="siinfinita">Esta es una animación CSS3 SI INFINITA</p>
+
+
 
             </div>
-
         </div>
     </div>
-</div>
+
 
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
@@ -100,7 +103,7 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
     <!-- CDN for week01 Loop -->
-    <script src="js/week08.js"></script>
+
 </div>
 </body>
 </html>

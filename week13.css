@@ -1,0 +1,177 @@
+.div{
+    width:150px;
+    height:200px;
+    background-color:#27ae60;
+    margin:30px;
+    position:relative;
+    left:0px;
+    text-align:center;
+    line-height:200px;
+    color:#fff;
+    font-size:20px;
+}
+
+.infinita{
+    -webkit-animation-name: AnimInfinita;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-direction:alternate;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-delay:1s;
+    animation-name: AnimInfinita;
+    animation-duration: 3s;
+    animation-iteration-count:infinite;
+    animation-direction:alternate;
+    animation-timing-function:linear;
+    animation-delay:1s;
+}
+
+@-webkit-keyframes AnimInfinita{
+    0%{
+        left:0px;
+        border-radius:0px;
+    }
+    50%{
+        background-color:#e67e22;
+        transform:rotate(0deg);
+    }
+    100%{
+        left:500px;
+        border-radius:40px;
+        background-color:#16a085;
+        transform:rotate(360deg);
+    }
+}
+
+
+@keyframes AnimInfinita{
+    0%{
+        left:0px;
+        border-radius:0px;
+    }
+    50%{
+        background-color:#e67e22;
+        transform:rotate(0deg);
+    }
+    100%{
+        left:500px;
+        border-radius:40px;
+        background-color:#16a085;
+        transform:rotate(360deg);
+    }
+}
+
+.hover{
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode:forwards;
+    animation-duration: 1s;
+    animation-fill-mode:fordwards;
+}
+
+.hover:hover{
+    cursor:pointer;
+    -webkit-animation-name: hoverAnim;
+    animation-name: hoverAnim;
+}
+
+
+@-webkit-keyframes hoverAnim {
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+    35%{
+        text-shadow:0 -6px 3px #fff;
+    }
+    50%{
+        -webkit-transform: scale3d(1.1, 1.1, 1.1);
+        transform: scale3d(1.1, 1.1, 1.1);
+        background-color:#17a88c;
+    }
+    70%{
+        text-shadow:0 6px 3px #fff;
+    }
+    100% {
+        -webkit-transform: scale3d(1.05, 1.05, 1.05);
+        transform: scale3d(1, 1, 1);
+        text-shadow:0 0px 3px #fff;
+        box-shadow:0 0 5px #000;
+    }
+}
+
+@keyframes hoverAnim  {
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+    35%{
+        text-shadow:0 -6px 3px #fff;
+    }
+    50%{
+        -webkit-transform: scale3d(1.1, 1.1, 1.1);
+        transform: scale3d(1.1, 1.1, 1.1);
+        background-color:#17a88c;
+    }
+    70%{
+        text-shadow:0 6px 3px #fff;
+    }
+    100% {
+        -webkit-transform: scale3d(1.05, 1.05, 1.05);
+        transform: scale3d(1, 1, 1);
+        text-shadow:0 0px 3px #fff;
+        box-shadow:0 0 5px #000;
+    }
+}
+
+#noinfinita {
+    animation-duration: 3s;
+    animation-iteration-count:3;
+    animation-direction: alternate;
+    animation-timing-function:linear;
+    animation-name: slidein;
+
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count:3;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-name: slidein;
+}
+
+
+#siinfinita {
+    animation-duration: 3s;
+    animation-iteration-count:infinite;
+    animation-direction: alternate;
+    animation-timing-function:linear;
+    animation-name: slidein;
+
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-name: slidein;
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 50%;
+        width: 100%
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
+@-webkit-keyframes slidein {
+    from {
+        margin-left: 50%;
+        width: 100%
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
