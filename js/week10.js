@@ -55,25 +55,25 @@ function funcionescanvas(opc)
     if(opc == "text")
     {
         var canvas = document.getElementById("mycanvas1");
-        var ctx = canvas.getContext("2d");
+        var theCanvas = canvas.getContext("2d");
         // Create gradient
-        var grd = ctx.createLinearGradient(0,0,140,0);
-        grd.addColorStop(0,"blue");
-        grd.addColorStop(1,"pink");
+        var gradeColor = theCanvas.createLinearGradient(0,0,140,0);
+        gradeColor.addColorStop(0,"blue");
+        gradeColor.addColorStop(1,"pink");
         // Fill with gradient
-        ctx.fillStyle = grd;
-        ctx.fillRect(10,10,225,80);//10 = X, 10 = Y, 180 = Width, 80 = Heigth
+        theCanvas.fillStyle = gradeColor;
+        theCanvas.fillRect(10,10,225,80);//10 = X, 10 = Y, 180 = Width, 80 = Heigth
 
-        ctx.font = "30px Verdana";
-        ctx.strokeText("My text", 10, 50);//10 = x, 50 = y
+        theCanvas.font = "30px Verdana";
+        theCanvas.strokeText("My text", 10, 50);//10 = x, 50 = y
     }
     else
     if(opc == "img")
     {
         var canvas = document.getElementById("mycanvas2");
-        var ctx = canvas.getContext("2d");
+        var theCanvas = canvas.getContext("2d");
         var img = document.getElementById("image");
-        ctx.drawImage(img,0,0,100,100);
+        theCanvas.drawImage(img,0,0,100,100);
     }
 }
 
