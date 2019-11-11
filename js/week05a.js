@@ -106,7 +106,7 @@ function assoativearray() {
 }
 function removeItemArray()
 {
-    var removeItemMovie = prompt("Do you What delete 1,2,3,4,5?");
+    var removeItemMovie = prompt("Do you want to delete 1,2,3,4,5?");
     if(removeItemMovie == 1){ localStorage.removeItem('theMovie1'); }
     if(removeItemMovie == 2){ localStorage.removeItem('theMovie2'); }
     if(removeItemMovie == 3){ localStorage.removeItem('theMovie3'); }
