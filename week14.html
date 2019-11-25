@@ -1,0 +1,187 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+    <title>Orbezua Luis - Week14Project</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+    <link rel="stylesheet" href="week14.css" />
+
+
+
+
+</head>
+<body onload="getLocation()"
+      class="is-preload">
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Header -->
+    <header id="header">
+        <div class="inner">
+
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Orbezua Luis</span>
+            </a>
+
+            <!-- Nav -->
+            <nav>
+                <ul>
+                    <li><a href="#menu">Menu</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- Menu -->
+    <nav id="menu">
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="week01.html">Week 01</a></li>
+            <li><a href="week02.html">Week 02</a></li>
+            <li><a href="week03.html">Week 03</a></li>
+            <li><a href="week04.html">Week 04</a></li>
+            <li><a href="week05.html">Week 05</a></li>
+            <li><a href="week06.html">Week 06</a></li>
+            <li><a href="week07.html">Week 07</a></li>
+            <li><a href="week08.html">Week 08</a></li>
+            <li><a href="week09.html">Week 09</a></li>
+            <li><a href="week10.html">Week 10</a></li>
+            <li><a href="week11.html">Week 11</a></li>
+            <li><a href="week12.html">Week 12</a></li>
+            <li><a href="week13.html">Week 13</a></li>
+            <li><a href="week14.html">Week 14</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+            <h1>Project for Tourist in the West of USA</h1>
+            <h2 style="color:blue">Without Custom Libraries </h2>
+            <div style="font-weight: bold">
+
+
+                <div class="content">
+                    <div class="contentdiv1">
+                        <img src="images/northamericamap.png" class="continent" title="Continent">
+                    </div>
+                    <div class="contentdiv2">
+                        <button onclick="SHOWVIDEO()" class="video">SHOW VIDEO TOURIST</button><br>
+                        INFO WEATHER Below. First select a State from the mosaic with the States picture, below the map<hr>
+                        <div id="infoweather">
+                        </div>
+                        <br>
+                        INFO LOCATION<hr>
+                        <button onclick="newPositionButton()">Search your current location, Map</button><br>
+                        <p>You can change latitude and longitude manually</p>
+                        Latitude: <input type="text" id="latitude" placeholder="latitude" onkeyup="newPosition()" value="">
+                        Longitude: <input type="text" id="longitude" placeholder="longitude" onkeyup="newPosition()" value="">
+                        <div id="location" class="locationMap">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content">
+                    <img src="images/mosaic/oregon.jpg" onclick="STATE('Oregon')" id="oregon" class="country" title="Oregon">
+                    <img src="images/mosaic/whasington.jpg" onclick="STATE('Whasington')" id="whasington" class="country" title="Whasington">
+                    <img src="images/mosaic/california.jpg" onclick="STATE('California')" id="california" class="country" title="California">
+                    <img src="images/mosaic/nevada.jpg" onclick="STATE('Nevada')" id="nevada" class="country" title="Nevada">
+                    <img src="images/mosaic/idaho.jpg" onclick="STATE('Idaho')" id="idaho" class="country" title="Idaho">
+                    <img src="images/mosaic/utah.jpg" onclick="STATE('Utah')" id="utah" class="country" title="Utah">
+                    <img src="images/mosaic/arizona.jpg" onclick="STATE('Arizona')" id="arizona" class="country" title="Arizona">
+                    <img src="images/mosaic/montana.jpg" onclick="STATE('Montana')" id="montana" class="country" title="Montana">
+                </div>
+                <div class="content" id="contentselect">
+                </div>
+                <hr style="width: 60%">
+                <div id="alarm">
+                    Name: <br><input type="text" id="name" placeholder="Name" value=""><br>
+                    Telephone: <br><input type="text" id="telephone" placeholder="Number" value=""><br>
+                    Latitude: <br><input type="text" id="latitudeLocation" placeholder="latitude" value=""><br>
+                    Longitude: <br><input type="text" id="longitudeLocation" placeholder="longitude" value=""><br>
+                    Situation:<br>
+                    <select id="situationAlarm">
+                        <option value="">-Select One Situation-</option>
+                        <option value="Atack Animal">Atack Animal</option>
+                        <option value="Wild Fire">Wild Fire</option>
+                        <option value="Situation Medical">Situation Medical</option>
+                        <option value="lost">Lost</option>
+                        <option value="abducted">Abducted</option>
+                    </select>
+                </div>
+                <div id="infoAlarm">
+                    <br>
+                    <button onclick="alarm()" style="color: red;font-weight: bold;cursor: pointer">SEND ALARM-Help</button><br>
+                    <p>You need emergency Help, fill out and click the alarm button to send the police your position</p>
+                    <div id="resultAlarm">
+
+                    </div>
+                </div>
+
+                <div class="content">
+
+                    <div id="infoFlags"><br><br><hr>
+                        <p>Double Click on the mosaic to see the Flag inside of a canvas</p>
+                        <img src="images/mosaic/oregon.jpg" onclick="funcionescanvas('oregon')" id="oregon" class="country2" title="Oregon">
+                        <img src="images/mosaic/whasington.jpg" onclick="funcionescanvas('whasington')" id="whasington" class="country2" title="Whasington">
+                        <img src="images/mosaic/california.jpg" onclick="funcionescanvas('california')" id="california" class="country2" title="California">
+                        <img src="images/mosaic/nevada.jpg" onclick="funcionescanvas('nevada')" id="nevada" class="country2" title="Nevada">
+                        <img src="images/mosaic/idaho.jpg" onclick="funcionescanvas('idaho')" id="idaho" class="country2" title="Idaho">
+                        <img src="images/mosaic/utah.jpg" onclick="funcionescanvas('utah')" id="utah" class="country2" title="Utah">
+                        <img src="images/mosaic/arizona.jpg" onclick="funcionescanvas('arizona')" id="arizona" class="country2" title="Arizona">
+                        <img src="images/mosaic/montana.jpg" onclick="funcionescanvas('montana')" id="montana" class="country2" title="Montana">
+
+                        <canvas id="mycanvas" width="570" height="280" style="border:1px solid #000000;"></canvas>
+                    </div>
+                </div>
+                <div id="infoVideo"><br><br><hr>
+                    <video id="myvideo" controls="">
+                        <source src="videow14.mp4" type="video/mp4">
+                        Your browser does not support HTML5 video.
+                    </video> <p>Inside of video you have panel control for play and pause</p>
+
+                    <hr>
+                    <button onclick="funcionesvideo('play')" class="cursor">Play</button>
+                    <button onclick="funcionesvideo('pause')" class="cursor">Pause</button>
+                    <button onclick="funcionesvideo('big')" class="cursor">Take Big</button>
+                    <button onclick="funcionesvideo('small')" class="cursor">Take Small</button>
+                    <button onclick="funcionesvideo('normal')" class="cursor">Take Normal</button>
+                    <button onclick="funcionesvideo('getTime')" class="cursor">Get Time Frame</button>
+                    <button onclick="funcionesvideo('setTime')" class="cursor">Set to 6 seconds</button>
+                    <br>
+                    <br>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script type="text/javascript" src="week14.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJc4pHJTXiCYTypCSgAms241GVEkXHbd8&callback=initMap"
+            type="text/javascript"></script>
+    <!-- CDN for week01 Loop -->
+
+</div>
+</body>
+</html>

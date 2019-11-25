@@ -84,7 +84,7 @@ function showingPokemon(){
 
         fetch(url)
             .then(response => response.json()) // if answer is in format Json
-    .then(data => { //then read, data is the answer from line 86
+            .then(data => { //then read, data is the answer from line 86
         newNode.innerHTML += " ID: " + data.id + " NAME POKEMON: " + data.name+"<br>";
 
         var species = data.species;

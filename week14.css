@@ -1,0 +1,255 @@
+.content{
+    width: 100%;
+    height: 100%;
+}
+.contentdiv1{
+    width: 60%;
+    height: 400px;
+    float: left;
+}
+.contentdiv2{
+    width: 40%;
+    height: 400px;
+    float: left;
+    text-align: left;
+}
+.continent{
+    width: 80%;
+    height: 100%;
+}
+.country{
+    width: 5%;
+    height: 5%;
+    cursor: pointer;
+    border-style: solid;
+    border-width: 1px;
+    -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
+    transition: width 2s;
+}
+.country:hover {
+    width: 10%;
+    border-radius: 50%;
+}
+.table table, th, td{
+    border: 1px solid black;
+
+}
+.locationMap{
+    width: 500px;
+    height: 500px;
+}
+#alarm{
+    float: left;
+    width: 20%;
+}
+#infoAlarm{
+    float: left;
+    width: 40%;
+    height: 495px;
+}
+#infoVideo{
+    float: left;
+
+}
+#infoFlags{
+    float: left;
+
+}
+.video{
+    cursor: pointer;
+}
+.cursor{
+    cursor: pointer;
+}
+.country2{
+    width: 10%;
+    height: 10%;
+    cursor: pointer;
+    border-style: solid;
+    -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
+    transition: width 2s;
+}
+.country2:hover {
+    width: 15%;
+    border-radius: 50%;
+}
+.rotate {
+    border-style: solid;
+    border-width: 1px;
+    display: block;
+    transition: width 2s, height 2s, background-color 2s, transform 2s;
+}
+.rotate:hover {
+    transform: rotate(360deg);
+}
+
+.move {
+    margin-left:0%;
+    background:#0F0;
+    -webkit-transition:all 1s ease;
+    -moz-transition:all 1s ease;
+    -o-transition:all 1s ease;
+    transition:all 1s ease;
+}
+/* Estilo que se aplica al pasar por encima de la DIV con clase TRA */
+.move:hover {
+    margin-left:10%;
+    border-radius:60%;
+    background:yellow;
+}
+
+.turn {
+    left: 120px;
+    background: blue;
+    -webkit-transition: 1s ease-in-out;
+    -moz-transition: 1s ease-in-out;
+    -o-transition: 1s ease-in-out;
+    transition: 1s ease-in-out;
+}
+.turn:hover {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+    left: calc(100% - 102px);
+    background: pink;
+}
+
+.transform{
+    transition: 2s ease-in-out;
+}
+
+.transform:hover{
+    transform: skew(25deg, 10deg);
+}
+
+.transform2 {
+    transition: 2s ease-in-out;
+}
+
+.transform2:hover{
+    transform: translateY(50px);
+}
+
+.infinita{
+    -webkit-animation-name: AnimInfinita;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-direction:alternate;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-delay:1s;
+    animation-name: AnimInfinita;
+    animation-duration: 3s;
+    animation-iteration-count:infinite;
+    animation-direction:alternate;
+    animation-timing-function:linear;
+    animation-delay:1s;
+}
+
+@-webkit-keyframes AnimInfinita{
+    0%{
+        left:0px;
+        border-radius:0px;
+    }
+    50%{
+        background-color:#e67e22;
+        transform:rotate(0deg);
+    }
+    100%{
+        left:500px;
+        border-radius:40px;
+        background-color:#16a085;
+        transform:rotate(360deg);
+    }
+}
+
+
+@keyframes AnimInfinita{
+    0%{
+        left:0px;
+        border-radius:0px;
+    }
+    50%{
+        background-color:#e67e22;
+        transform:rotate(0deg);
+    }
+    100%{
+        left:500px;
+        border-radius:40px;
+        background-color:#16a085;
+        transform:rotate(360deg);
+    }
+}
+
+.hover{
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode:forwards;
+    animation-duration: 1s;
+    animation-fill-mode:fordwards;
+}
+
+.hover:hover{
+    cursor:pointer;
+    -webkit-animation-name: hoverAnim;
+    animation-name: hoverAnim;
+}
+
+
+@-webkit-keyframes hoverAnim {
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+    35%{
+        text-shadow:0 -6px 3px #fff;
+    }
+    50%{
+        -webkit-transform: scale3d(1.1, 1.1, 1.1);
+        transform: scale3d(1.1, 1.1, 1.1);
+        background-color:#17a88c;
+    }
+    70%{
+        text-shadow:0 6px 3px #fff;
+    }
+    100% {
+        -webkit-transform: scale3d(1.05, 1.05, 1.05);
+        transform: scale3d(1, 1, 1);
+        text-shadow:0 0px 3px #fff;
+        box-shadow:0 0 5px #000;
+    }
+}
+
+@keyframes hoverAnim  {
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+    35%{
+        text-shadow:0 -6px 3px #fff;
+    }
+    50%{
+        -webkit-transform: scale3d(1.1, 1.1, 1.1);
+        transform: scale3d(1.1, 1.1, 1.1);
+        background-color:#17a88c;
+    }
+    70%{
+        text-shadow:0 6px 3px #fff;
+    }
+    100% {
+        -webkit-transform: scale3d(1.05, 1.05, 1.05);
+        transform: scale3d(1, 1, 1);
+        text-shadow:0 0px 3px #fff;
+        box-shadow:0 0 5px #000;
+    }
+}
+
+.flag1 {
+    border-radius: 6px;
+    transition-property: background, border-radius;
+    transition-duration: .2s, 1s;
+    transition-timing-function: linear;
+}
+.flag1:hover {
+    border-radius: 50%;
+}
