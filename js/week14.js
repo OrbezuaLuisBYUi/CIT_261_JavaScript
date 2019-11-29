@@ -160,7 +160,7 @@ function addzipcode(zipcode)
 function weatherstate(zip)
 {
     var xmlhttp = new XMLHttpRequest();
-    var url = "http://api.openweathermap.org/data/2.5/weather?zip="+zip+",us&appid=cfbf2de05d8febc788f181466fb3a807";
+    var url = "https://api.openweathermap.org/data/2.5/weather?zip="+zip+",us&appid=cfbf2de05d8febc788f181466fb3a807";
     xmlhttp.onreadystatechange=function() {
         if (this.readyState == 4 && this.status == 200) {//from line 55
             theWeather(this.responseText,zip); // this is the answer of the url
