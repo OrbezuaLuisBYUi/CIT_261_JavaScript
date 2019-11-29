@@ -339,7 +339,7 @@ function funcionesvideo(opc) {
     else
     if(opc == "setTime")
     {
-        video.currentTime=6;
+        video.currentTime=8;
     }
 }
 function funcionescanvas(opc)
