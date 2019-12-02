@@ -182,11 +182,12 @@ function theWeather(response,zip)
     var all = arr.clouds.all;
     //sys
     var country = arr.sys.country;
+    temp = (temp - 273.15) * 9/5 + 32;
 
     var out = "<table class='table'>";  // to show the table Html
     out += "<tr><td>Temp</td><td>Humidity</td><td>Speed</td><td>Deg</td><td>Clouds</td><td>Country</td></tr>";
     out += "<tr><td>" +   // concatenar row (tr) with column (td)
-    temp +
+    temp.toFixed(2) +
     "</td><td>" +
     humidity +
     "</td><td>" +
@@ -362,5 +363,47 @@ function SHOWVIDEO()
 {
     var video = document.getElementById("myvideo");
     video.play();
-    window.scrollBy(0, 4000);
+    window.scrollBy(0, 2500);
+}
+
+
+function accesscamera()
+{
+    var player = document.getElementById('player');
+    var snapshotCanvas = document.getElementById('snapshot');
+    var captureButton = document.getElementById('capture');
+
+    var handleSuccess = function(stream) {
+        // Attach the video stream to the video element and autoplay.
+        player.srcObject = stream;
+    };
+
+    captureButton.addEventListener('click', function() {
+        var context = snapshotCanvas.getContext('2d');
+        // Draw the video frame to the canvas.
+        context.drawImage(player, 0, 0, snapshotCanvas.width,
+            snapshotCanvas.height);
+    });
+
+    navigator.mediaDevices.getUserMedia({video: true})
+        .then(handleSuccess);
+}
+
+function save()
+{
+    var hidden_canvas = document.getElementById("snapshot");
+    // Get an image dataURL from the canvas.
+    var imageDataURL = hidden_canvas.toDataURL('image/png');
+
+    var mosaicPicture = document.getElementById("picturemosaic");
+
+    var x = document.createElement("IMG");
+    x.setAttribute("src", imageDataURL);
+    x.setAttribute("width", hidden_canvas.width);
+    x.setAttribute("height", hidden_canvas.width);
+    x.setAttribute("alt", "Vacations picture");
+    mosaicPicture.appendChild(x);
+
+    // Set the href attribute of the download button.
+    document.querySelector('#dl-btn').href = imageDataURL;
 }

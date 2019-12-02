@@ -19,7 +19,7 @@
 
 
 </head>
-<body onload="getLocation()"
+<body onload="getLocation();accesscamera()"
       class="is-preload">
 <!-- Wrapper -->
 <div id="wrapper">
@@ -134,14 +134,14 @@
 
                     <div id="infoFlags"><br><br><hr>
                         <p>Double Click on the mosaic to see the Flag inside of a canvas</p>
-                        <img src="images/mosaic/oregon.jpg" onclick="funcionescanvas('oregon')" id="oregon" class="country2" title="Oregon">
-                        <img src="images/mosaic/whasington.jpg" onclick="funcionescanvas('whasington')" id="whasington" class="country2" title="Whasington">
-                        <img src="images/mosaic/california.jpg" onclick="funcionescanvas('california')" id="california" class="country2" title="California">
-                        <img src="images/mosaic/nevada.jpg" onclick="funcionescanvas('nevada')" id="nevada" class="country2" title="Nevada">
-                        <img src="images/mosaic/idaho.jpg" onclick="funcionescanvas('idaho')" id="idaho" class="country2" title="Idaho">
-                        <img src="images/mosaic/utah.jpg" onclick="funcionescanvas('utah')" id="utah" class="country2" title="Utah">
-                        <img src="images/mosaic/arizona.jpg" onclick="funcionescanvas('arizona')" id="arizona" class="country2" title="Arizona">
-                        <img src="images/mosaic/montana.jpg" onclick="funcionescanvas('montana')" id="montana" class="country2" title="Montana">
+                        <img src="images/mosaic/oregon.jpg" onclick="funcionescanvas('oregon')"  class="country2" title="Oregon">
+                        <img src="images/mosaic/whasington.jpg" onclick="funcionescanvas('whasington')"  class="country2" title="Whasington">
+                        <img src="images/mosaic/california.jpg" onclick="funcionescanvas('california')"  class="country2" title="California">
+                        <img src="images/mosaic/nevada.jpg" onclick="funcionescanvas('nevada')"  class="country2" title="Nevada">
+                        <img src="images/mosaic/idaho.jpg" onclick="funcionescanvas('idaho')"  class="country2" title="Idaho">
+                        <img src="images/mosaic/utah.jpg" onclick="funcionescanvas('utah')"  class="country2" title="Utah">
+                        <img src="images/mosaic/arizona.jpg" onclick="funcionescanvas('arizona')"  class="country2" title="Arizona">
+                        <img src="images/mosaic/montana.jpg" onclick="funcionescanvas('montana')"  class="country2" title="Montana">
 
                         <canvas id="mycanvas" width="570" height="280" style="border:1px solid #000000;"></canvas>
                     </div>
@@ -163,7 +163,17 @@
                     <br>
                     <br>
                 </div>
+                <video id="player" controls autoplay></video><br>
+                <button id="capture">Take Picture</button>
+                <button >
+                    <a id="dl-btn" href="#" download="TouristPicture.png" onclick="save()">Save Photo In canvas</a>
+                </button>
+                <br>
+                <canvas id="snapshot" width=320 height=240></canvas><br>
 
+                <div id="picturemosaic" >
+
+                </div>
 
 
             </div>
