@@ -363,7 +363,7 @@ function SHOWVIDEO()
 {
     var video = document.getElementById("myvideo");
     video.play();
-    window.scrollBy(0, 2500);
+    window.scrollBy(0, 5000);
 }
 
 
@@ -406,4 +406,41 @@ function save()
 
     // Set the href attribute of the download button.
     document.querySelector('#dl-btn').href = imageDataURL;
+}
+
+
+class NameThePicture{
+    constructor(name) {
+        this.photoname = name;
+    }
+    present() {
+        return 'Name picture is: ' + this.photoname;
+    }
+}
+
+// "extends" to show this class is inheritance from class Car
+class MyPicture extends NameThePicture {
+    constructor(name, amount, position) {
+        super(name);
+        this.amount = amount;
+        this.position = position;
+    }
+    // function to show result
+    show() {
+        return this.present() + ', Picture: ' + this.position + ' OF '+ this.amount;
+    }
+}
+function seePicture()
+{
+    var ancestor = document.getElementById('picturemosaic');//Este es el padre ID del mosaico
+    descendents = ancestor.getElementsByTagName('img');//Este es el hijo del padre con ID picturemosaic
+
+    for (var i = 0; i < descendents.length; ++i) {
+        descendents[i].setAttribute("id", i);
+        descendents[i].className = 'hover';
+        var cantImg = i+1;
+        var namePicture = prompt("Enter a name for your picture: "+cantImg);
+        picture = new MyPicture(namePicture, descendents.length, i+1);
+        descendents[i].setAttribute("title", picture.show());
+    }
 }

@@ -146,6 +146,24 @@
                         <canvas id="mycanvas" width="570" height="280" style="border:1px solid #000000;"></canvas>
                     </div>
                 </div>
+
+                <video id="player" controls autoplay></video><br>
+                <button id="capture">Take Picture</button>
+                <button >
+                    <a id="dl-btn" href="#" download="TouristPicture.png" onclick="save()">Save Photo In canvas</a>
+                </button>
+                <br>
+                <canvas id="snapshot" width=320 height=240></canvas><br>
+
+                <div id="picturemosaic" >
+
+                </div>
+
+                <div id="picturemosaic" >
+
+                </div>
+
+                <button onclick="seePicture()">See Picture</button>
                 <div id="infoVideo"><br><br><hr>
                     <video id="myvideo" controls="">
                         <source src="videow14.mp4" type="video/mp4">
@@ -163,18 +181,6 @@
                     <br>
                     <br>
                 </div>
-                <video id="player" controls autoplay></video><br>
-                <button id="capture">Take Picture</button>
-                <button >
-                    <a id="dl-btn" href="#" download="TouristPicture.png" onclick="save()">Save Photo In canvas</a>
-                </button>
-                <br>
-                <canvas id="snapshot" width=320 height=240></canvas><br>
-
-                <div id="picturemosaic" >
-
-                </div>
-
 
             </div>
         </div>
