@@ -371,20 +371,20 @@ function accesscamera()
 {
     var player = document.getElementById('player');
     var snapshotCanvas = document.getElementById('snapshot');
-    var captureButton = document.getElementById('capture');
+    var captureButton = document.getElementById('capture'); //to take the picture
 
-    var handleSuccess = function(stream) {
+    var handleSuccess = function(stream) {//this is new function inside of function, look line 388
         // Attach the video stream to the video element and autoplay.
         player.srcObject = stream;
     };
 
-    captureButton.addEventListener('click', function() {
-        var context = snapshotCanvas.getContext('2d');
+    captureButton.addEventListener('click', function() { //when user is doing click
+        var context = snapshotCanvas.getContext('2d'); // ready for the image that is in memory
         // Draw the video frame to the canvas.
-        context.drawImage(player, 0, 0, snapshotCanvas.width,
+        context.drawImage(player, 0, 0, snapshotCanvas.width, // player is what image is captured , here is assign x and y the same width and height that has canvas
             snapshotCanvas.height);
     });
-
+// this is new how to use the video for the camera
     navigator.mediaDevices.getUserMedia({video: true})
         .then(handleSuccess);
 }
@@ -393,19 +393,19 @@ function save()
 {
     var hidden_canvas = document.getElementById("snapshot");
     // Get an image dataURL from the canvas.
-    var imageDataURL = hidden_canvas.toDataURL('image/png');
+    var imageDataURL = hidden_canvas.toDataURL('image/png'); //la image will be in png
 
-    var mosaicPicture = document.getElementById("picturemosaic");
+    var mosaicPicture = document.getElementById("picturemosaic");// donde ira la foto
 
     var x = document.createElement("IMG");
     x.setAttribute("src", imageDataURL);
     x.setAttribute("width", hidden_canvas.width);
-    x.setAttribute("height", hidden_canvas.width);
+    x.setAttribute("height", hidden_canvas.height);
     x.setAttribute("alt", "Vacations picture");
-    mosaicPicture.appendChild(x);
+    mosaicPicture.appendChild(x); // to show in the DOM and the user can see it inside of the mosaic
 
     // Set the href attribute of the download button.
-    document.querySelector('#dl-btn').href = imageDataURL;
+    document.querySelector('#dl-btn').href = imageDataURL;//queryselector is look like getElementbyId
 }
 
 
@@ -430,6 +430,8 @@ class MyPicture extends NameThePicture {
         return this.present() + ', Picture: ' + this.position + ' OF '+ this.amount;
     }
 }
+
+// to give a name to the picture and give an effect to the picture and see the pictures
 function seePicture()
 {
     var ancestor = document.getElementById('picturemosaic');//Este es el padre ID del mosaico
@@ -438,9 +440,9 @@ function seePicture()
     for (var i = 0; i < descendents.length; ++i) {
         descendents[i].setAttribute("id", i);
         descendents[i].className = 'hover';
-        var cantImg = i+1;
+        var cantImg = i+1;  //to start in 1
         var namePicture = prompt("Enter a name for your picture: "+cantImg);
-        picture = new MyPicture(namePicture, descendents.length, i+1);
+        picture = new MyPicture(namePicture, descendents.length, i+1);//this is an intance to clase myPicture line 422
         descendents[i].setAttribute("title", picture.show());
     }
 }
